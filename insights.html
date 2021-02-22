@@ -22,25 +22,363 @@
 </head>
 <body>
 <!-- ========== HEADER ========== -->
-<header id="header" class="header header-bg-transparent header-abs-top py-3">
+<header id="header" class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide"
+        data-hs-header-options='{
+          "fixMoment": 1,
+          "fixEffect": "slide"
+        }'>
+  <!-- Search -->
+  <div id="searchPushTop" class="search-push-top">
+    <div class="container position-relative">
+      <div class="search-push-top-content pt-3">
+        <!-- Close Button -->
+        <div class="search-push-top-close-btn">
+          <div class="hs-unfold">
+            <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-soft-secondary mt-2 mr-2" href="javascript:;"
+               data-hs-unfold-options='{
+                "target": "#searchPushTop",
+                "type": "jquery-slide",
+                "contentSelector": ".search-push-top"
+               }'>
+              <svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- End Close Button -->
+
+        <!-- Input -->
+        <form class="input-group">
+          <input type="search" class="form-control" placeholder="Search 21K Class" aria-label="Search Front">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-primary">Search</button>
+          </div>
+        </form>
+        <!-- End Input -->
+
+        <!-- Content -->
+        <div class="row d-none d-md-flex mt-7">
+          <div class="col-sm-6">
+            <span class="h5">Quick Links</span>
+
+            <div class="row">
+              <!-- Nav Link -->
+              <div class="col-6">
+                <div class="nav nav-sm nav-x-0 flex-column">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Search Results List
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Search Results Grid
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> About
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Services
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Invoice
+                  </a>
+                </div>
+              </div>
+              <!-- End Nav Link -->
+
+              <!-- Nav Link -->
+              <div class="col-6">
+                <div class="nav nav-sm nav-x-0 flex-column">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Profile
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> User Contacts
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Reviews
+                  </a>
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-angle-right mr-1"></i> Settings
+                  </a>
+                </div>
+              </div>
+              <!-- End Nav Link -->
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <!-- Banner -->
+            <div class="rounded search-push-top-banner">
+              <div class="d-flex align-items-center">
+                <div class="search-push-top-banner-container">
+                  <img class="img-fluid search-push-top-banner-img" src="./assets/img/mockups/img3.png" alt="Image Description">
+                  <img class="img-fluid search-push-top-banner-img" src="./assets/img/mockups/img2.png" alt="Image Description">
+                </div>
+
+                <div>
+                  <div class="mb-4">
+                    <span class="h5">Featured Item</span>
+                    <p>Create astonishing web sites and pages.</p>
+                  </div>
+                  <a class="btn btn-xs btn-soft-success transition-3d-hover" href="javascript:void(0);">Join Now <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Banner -->
+          </div>
+        </div>
+        <!-- End Content -->
+      </div>
+    </div>
+  </div>
+  <!-- End Search -->
+
   <div class="header-section">
+    <!-- Topbar -->
+    <div class="container header-hide-content pt-2">
+      <div class="d-flex align-items-center">
+
+        <div class="ml-auto">
+          <!-- Jump To -->
+          <div class="hs-unfold d-sm-none mr-2">
+            <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;"
+               data-hs-unfold-options='{
+                  "target": "#jumpToDropdown",
+                  "type": "css-animation",
+                  "event": "hover",
+                  "hideOnScroll": "true"
+                 }'>
+              Quick Tabs
+            </a>
+
+            <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
+              <a class="dropdown-item" href="javascript:;">Tutoring</a>
+              <a class="dropdown-item active" href="javascript:;">Coaching</a>
+              <a class="dropdown-item" href="javascript:;">Commerce</a>
+            </div>
+          </div>
+          <!-- End Jump To -->
+
+          <!-- Links -->
+          <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
+            <a class="nav-link" href="javascript:;">Tutoring</a>
+            <a class="nav-link active" href="javascript:;">Coaching</a>
+            <a class="nav-link" href="javascript:;">Commerce</a>
+          </div>
+          <!-- End Links -->
+        </div>
+
+        <ul class="list-inline ml-2 mb-0">
+          <!-- Search -->
+          <li class="list-inline-item">
+            <div class="hs-unfold">
+              <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
+                 data-hs-unfold-options='{
+                  "target": "#searchPushTop",
+                  "type": "jquery-slide",
+                  "contentSelector": ".search-push-top"
+                 }'>
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+          </li>
+          <!-- End Search -->
+
+          <!-- Shopping Cart -->
+          <li class="list-inline-item">
+            <div class="hs-unfold">
+              <a class="js-hs-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary" href="javascript:;"
+                 data-hs-unfold-options='{
+                  "target": "#shoppingCartDropdown",
+                  "type": "css-animation",
+                  "event": "hover",
+                  "hideOnScroll": "true"
+                 }'>
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+
+              <div id="shoppingCartDropdown" class="hs-unfold-content dropdown-menu dropdown-menu-right dropdown-card text-center" style="min-width: 275px;">
+                <div class="card">
+                  <div class="card-body">
+                    <figure class="max-w-9rem mx-auto mb-3">
+                      <img class="img-fluid" src="./assets/svg/illustrations/empty-cart.svg" alt="SVG">
+                    </figure>
+                    <span class="d-block">Your cart is empty</span>
+                  </div>
+
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary btn-xs">View Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- End Shopping Cart -->
+
+          <!-- Account Login -->
+<!--          <li class="list-inline-item">-->
+<!--            <div class="hs-unfold">-->
+<!--              <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-secondary" href="javascript:;" data-toggle="modal" data-target="#signupModal">-->
+<!--                <i class="fas fa-user-circle"></i>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </li>-->
+          <!-- End Account Login -->
+        </ul>
+      </div>
+    </div>
+    <!-- End Topbar -->
+
     <div id="logoAndNav" class="container">
-      <nav class="navbar">
+      <!-- Nav -->
+      <nav class="js-mega-menu navbar navbar-expand-xl">
+        <!-- Logo -->
         <a class="navbar-brand" href="./index.html" aria-label="Front">
           <img src="./assets/img/logos/logo.jpeg" alt="Logo">
         </a>
+        <!-- End Logo -->
 
-        <div class="ml-auto">
-          <a class="nav-link font-size-1 py-2 pl-0" href="./index.html">
-            <div class="d-flex align-items-center">
-              <svg class="mb-0 mr-1" width="16px" height="16px" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M8.22,12.72A.75.75,0,0,1,8,12.19v-.38a.77.77,0,0,1,.22-.53l5.14-5.13a.5.5,0,0,1,.71,0l.71.71a.49.49,0,0,1,0,.7L10.33,12l4.45,4.44a.5.5,0,0,1,0,.71l-.71.7a.5.5,0,0,1-.71,0Z"></path>
-              </svg> Main Page
-            </div>
-          </a>
-          <!--<a class="btn btn-sm btn-primary transition-3d-hover" href="page-status.html">Check for Updates</a>-->
+        <!-- Responsive Toggle Button -->
+        <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navBar"
+                data-toggle="collapse"
+                data-target="#navBar">
+          <span class="navbar-toggler-default">
+            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+            </svg>
+          </span>
+          <span class="navbar-toggler-toggled">
+            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+            </svg>
+          </span>
+        </button>
+        <!-- End Responsive Toggle Button -->
+
+        <!-- Navigation -->
+        <div id="navBar" class="collapse navbar-collapse">
+          <div class="navbar-body header-abs-top-inner">
+            <ul class="navbar-nav">
+
+              <!-- About Us -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="aboutusMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle " href="javascript:void(0);" aria-haspopup="true" aria-expanded="false" aria-labelledby="aboutusSubMenu">About Us</a>
+
+                <!-- About Us - Submenu -->
+                <div id="aboutusSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="aboutusMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item " href="./about-us.html">What sets us apart?</a>
+                  <a class="dropdown-item " href="./values-and-ethos.html">Values & Ethos</a>
+                  <a class="dropdown-item " href="./21k-group.html">21K Group</a>
+                  <a class="dropdown-item " href="./our-team.html">Our Team</a>
+                  <a class="dropdown-item " href="./our-partners.html">Our Partners</a>
+                  <a class="dropdown-item " href="./policy-and-governance.html">Policy & Governance</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End About Us -->
+
+
+              <!-- Academics -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle " href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Academics</a>
+
+                <!-- Academics - Submenu -->
+                <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item " href="./neet-test-series.html">NEET Test Series</a>
+                  <a class="dropdown-item " href="./neet-2021-personal-coaching.html">NEET Coaching</a>
+                  <a class="dropdown-item " href="./neet-2022-full-year.html">JEE Test Series</a>
+                  <a class="dropdown-item " href="./iit-jee-2022-full-year.html">JEE Coaching</a>
+
+                  <div class="dropdown-divider"></div>
+
+                  <span class="d-block h5 mx-4 mt-4">Excellence</span>
+                  <a class="dropdown-item " href="./olympiads.html">Olympiads</a>
+                  <a class="dropdown-item " href="./national-talent-exam.html">National Talent Exam</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Academics -->
+
+              <!-- Admissions -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="admissionsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle " href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="admissionsSubMenu">Admissions</a>
+
+                <!-- Admissions - Submenu -->
+                <div id="admissionsSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="admissionsMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item " href="./how-to-apply.html">How to apply?</a>
+                  <a class="dropdown-item " href="./key-dates.html">Key Dates</a>
+                  <a class="dropdown-item " href="./fees-finance-and-scholarships.html">Fees, Finance & Scholarships </a>
+                  <a class="dropdown-item " href="./who-should-enrol.html">Who should enrol?</a>
+                  <a class="dropdown-item " href="./process-and-requirements.html">Process & Requirements</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Admissions -->
+
+              <!-- How it works? -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="howitworksMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle " href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="howitworksSubMenu">How it works?</a>
+
+                <!-- How it works? - Submenu -->
+                <div id="howitworksSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="howitworksMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item " href="./how-does-it-work.html">How does it work?</a>
+                  <a class="dropdown-item " href="./technology.html">Technology</a>
+                  <a class="dropdown-item " href="./why-online-only.html">Why Online only?</a>
+                  <a class="dropdown-item " href="./who-is-21k-class.html">Who is 21K Class for?</a>
+                  <a class="dropdown-item " href="./faq.html">FAQ</a>
+                  <a class="dropdown-item " href="./health-and-wealthness.html">Health & Wealthness</a>
+                  <a class="dropdown-item " href="./your-privacy.html">Your Privacy</a>
+                  <a class="dropdown-item " href="./safety-and-security.html">Safety & Security</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End How it works? -->
+
+              <!-- Being21K -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="being21kMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle active" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="being21kSubMenu">#Being21K</a>
+
+                <!-- Being21K - Submenu -->
+                <div id="being21kSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="being21kMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item " href="./student-work.html">Student Work</a>
+                  <a class="dropdown-item " href="./parents-speak.html">Parent's Speak</a>
+                  <a class="dropdown-item " href="./meet-our-faculty.html">Meet our Faculty</a>
+                  <a class="dropdown-item " href="./events.html">Events</a>
+                  <a class="dropdown-item " href="./media-hub.html">Media Hub</a>
+                  <a class="dropdown-item active" href="./insights.html">Insights</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Being21K -->
+
+              <!-- Connect -->
+              <li class="hs-has-sub-menu navbar-nav-item">
+                <a id="connectMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle " href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="connectSubMenu">Connect</a>
+
+                <!-- Connect - Submenu -->
+                <div id="connectSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="connectMegaMenu" style="min-width: 230px;">
+                  <a class="dropdown-item " href="./contact-us.html">Contact Us</a>
+                  <a class="dropdown-item " href="./work-with-us.html">Work with us</a>
+                  <a class="dropdown-item " href="./social.html">Social</a>
+                </div>
+                <!-- End Submenu -->
+              </li>
+              <!-- End Connect -->
+
+              <!-- Button -->
+              <li class="navbar-nav-last-item">
+                <a class="btn btn-sm btn-primary transition-3d-hover" href="javascript:void(0);">Join Now</a>
+              </li>
+              <!-- End Button -->
+            </ul>
+          </div>
         </div>
+        <!-- End Navigation -->
       </nav>
+      <!-- End Nav -->
     </div>
   </div>
 </header>
@@ -65,49 +403,471 @@
 <!-- ========== END MAIN ========== -->
 
 <!-- ========== FOOTER ========== -->
-<footer class="position-absolute right-0 bottom-0 left-0">
+<footer class="bg-dark">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center space-1">
-      <!-- Copyright -->
-      <p class="small text-muted mb-0">21K Class &copy; 2021. All rights reserved.</p>
-      <!-- End Copyright -->
+    <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
+      <div class="row justify-content-lg-between">
+        <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0">
+          <!-- Logo -->
+          <div class="mb-4">
+            <a href="index.html" aria-label="Front">
+              <h3 class="text-primary font-weight-normal">21K Class</h3>
+            </a>
+          </div>
+          <!-- End Logo -->
 
-      <!-- Social Networks -->
-      <ul class="list-inline mb-0">
-        <li class="list-inline-item">
-          <a class="btn btn-xs btn-icon btn-ghost-secondary" href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn btn-xs btn-icon btn-ghost-secondary" href="#">
-            <i class="fab fa-google"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn btn-xs btn-icon btn-ghost-secondary" href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn btn-xs btn-icon btn-ghost-secondary" href="#">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-      </ul>
-      <!-- End Social Networks -->
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+            <li class="nav-item">
+              <a class="nav-link media" href="javascript:;">
+                  <span class="media">
+                    <span class="fas fa-envelope mt-1 mr-2"></span>
+                    <span class="media-body">
+                      info@21kclass.com
+                    </span>
+                  </span>
+              </a>
+            </li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+
+        <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+          <h5 class="text-white">About Us</h5>
+
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+            <li class="nav-item"><a class="nav-link" href="./21k-group.html">21K Group</a></li>
+            <li class="nav-item"><a class="nav-link" href="./our-team.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="./our-partners.html">Partners</a></li>
+            <li class="nav-item"><a class="nav-link" href="./work-with-us.html">Careers <span class="badge badge-primary ml-1">We're hiring</span></a></li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+
+        <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+          <h5 class="text-white">Admissions</h5>
+
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+            <li class="nav-item"><a class="nav-link" href="./how-to-apply.html">How to Apply?</a></li>
+            <li class="nav-item"><a class="nav-link" href="./key-dates.html">Key Dates</a></li>
+            <li class="nav-item"><a class="nav-link" href="./process-and-requirements.html">Process & Requirements</a></li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+
+        <div class="col-6 col-md-3 col-lg">
+          <h5 class="text-white">#Being21K</h5>
+
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+            <li class="nav-item"><a class="nav-link" href="./student-work.html">Student Work</a></li>
+            <li class="nav-item"><a class="nav-link" href="./parents-speak.html">Parent's Speak</a></li>
+            <li class="nav-item"><a class="nav-link" href="./meet-our-faculty.html">Faculties</a></li>
+            <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="./insights.html">Insights</a></li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+
+        <div class="col-6 col-md-3 col-lg">
+          <h5 class="text-white">Resources</h5>
+
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-x-0 nav-white flex-column">
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="javascrript:;">-->
+<!--                  <span class="media align-items-center">-->
+<!--                    <i class="fa fa-user-circle mr-2"></i>-->
+<!--                    <span class="media-body">Your Account</span>-->
+<!--                  </span>-->
+<!--              </a>-->
+<!--            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="./contact-us.html">
+                  <span class="media align-items-center">
+                    <i class="fa fa-envelope mr-2"></i>
+                    <span class="media-body">Contact Us</span>
+                  </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./faq.html">
+                  <span class="media align-items-center">
+                    <i class="fa fa-question-circle mr-2"></i>
+                    <span class="media-body">FAQ</span>
+                  </span>
+              </a>
+            </li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+      </div>
+    </div>
+
+    <hr class="opacity-xs my-0">
+
+    <div class="space-1">
+      <div class="row align-items-md-center mb-7">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <!-- Nav Link -->
+          <ul class="nav nav-sm nav-white nav-x-sm align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./your-privacy.html">Privacy</a>
+            </li>
+            <li class="nav-item opacity mx-3">&#47;</li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:;">Terms</a>
+            </li>
+          </ul>
+          <!-- End Nav Link -->
+        </div>
+
+        <div class="col-md-6 text-md-right">
+          <ul class="list-inline mb-0">
+            <!-- Social Networks -->
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-light" href="javascript:;" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-light" href="javascript:;" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-light" href="javascript:;" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-light" href="javascript:;" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn btn-xs btn-icon btn-soft-light" href="javascript:;" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <!-- End Social Networks -->
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="w-md-75 text-lg-center mx-lg-auto">
+        <p class="text-white opacity-sm small">21K Class &copy; 2021. All rights reserved.</p>
+      </div>
+      <!-- End Copyright -->
     </div>
   </div>
 </footer>
 <!-- ========== END FOOTER ========== -->
 
+<!-- ========== SECONDARY CONTENTS ========== -->
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- Header -->
+      <div class="modal-close">
+        <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+          <svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+          </svg>
+        </button>
+      </div>
+      <!-- End Header -->
+
+      <!-- Body -->
+      <div class="modal-body p-sm-5">
+        <form class="js-validate">
+          <!-- Sign in -->
+          <div id="signinModalForm">
+            <div class="text-center mb-5">
+              <h2>Sign in</h2>
+              <p>Don't have an account yet?
+                <a class="js-animation-link" href="javascript:;"
+                   data-hs-show-animation-options='{
+                       "targetSelector": "#signupModalForm",
+                       "groupName": "idForm"
+                     }'>Sign up here</a>
+              </p>
+            </div>
+
+            <a class="btn btn-block btn-white mb-2" href="#">
+                <span class="d-flex justify-content-center align-items-center">
+                  <img class="avatar avatar-xss mr-2" src="./assets/svg/brands/google.svg" alt="Image Description">
+                  Sign in with Google
+                </span>
+            </a>
+
+            <a class="js-animation-link btn btn-block btn-primary mb-2" href="#"
+               data-hs-show-animation-options='{
+                   "targetSelector": "#signinWithEmailModalForm",
+                   "groupName": "idForm"
+                 }'>Sign in with Email</a>
+          </div>
+          <!-- End Sign in -->
+
+          <!-- Sign in with Modal -->
+          <div id="signinWithEmailModalForm" style="display: none; opacity: 0;">
+            <div class="text-center mb-5">
+              <h2>Sign in</h2>
+              <p>Don't have an account yet?
+                <a class="js-animation-link" href="javascript:;"
+                   data-hs-show-animation-options='{
+                       "targetSelector": "#signupModalForm",
+                       "groupName": "idForm"
+                     }'>Sign up here</a>
+              </p>
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="signinModalFormSrEmail">Your email</label>
+              <input type="email" class="form-control" name="email" id="signinModalFormSrEmail" placeholder="email@address.com" aria-label="email@address.com" required data-msg="Please enter a valid email address.">
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="signinModalFormSrPassword">
+                  <span class="d-flex justify-content-between align-items-center">
+                    Password
+                    <a class="js-animation-link link text-muted" href="javascript:;"
+                       data-hs-show-animation-options='{
+                         "targetSelector": "#forgotPasswordModalForm",
+                         "groupName": "idForm"
+                       }'>Forgot Password?</a>
+                  </span>
+              </label>
+              <input type="password" class="form-control" name="password" id="signinModalFormSrPassword" placeholder="8+ characters required" aria-label="8+ characters required" required data-msg="Your password is invalid. Please try again.">
+            </div>
+            <!-- End Form Group -->
+
+            <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+          </div>
+          <!-- End Sign in with Modal -->
+
+          <!-- Sign up -->
+          <div id="signupModalForm" style="display: none; opacity: 0;">
+            <div class="text-center mb-5">
+              <h2>Sign up</h2>
+              <p>Already have an account?
+                <a class="js-animation-link" href="javascript:;"
+                   data-hs-show-animation-options='{
+                       "targetSelector": "#signinModalForm",
+                       "groupName": "idForm"
+                     }'>Sign in here</a>
+              </p>
+            </div>
+
+            <a class="btn btn-block btn-white mb-2" href="#">
+                <span class="d-flex justify-content-center align-items-center">
+                  <img class="avatar avatar-xss mr-2" src="./assets/svg/brands/google.svg" alt="Image Description">
+                  Sign up with Google
+                </span>
+            </a>
+
+            <a class="js-animation-link btn btn-block btn-primary mb-2" href="#"
+               data-hs-show-animation-options='{
+                   "targetSelector": "#signupWithEmailModalForm",
+                   "groupName": "idForm"
+                 }'>Sign up with Email</a>
+
+            <div class="text-center mt-3">
+              <p class="font-size-1 mb-0">By continuing you agree to our <a href="#">Terms and Conditions</a></p>
+            </div>
+          </div>
+          <!-- End Sign up -->
+
+          <!-- Sign up with Modal -->
+          <div id="signupWithEmailModalForm" style="display: none; opacity: 0;">
+            <div class="text-center mb-5">
+              <h2>Sign up</h2>
+              <p>Already have an account?
+                <a class="js-animation-link" href="javascript:;"
+                   data-hs-show-animation-options='{
+                       "targetSelector": "#signinModalForm",
+                       "groupName": "idForm"
+                     }'>Sign in here</a>
+              </p>
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="signupModalFormSrEmail">Your email</label>
+              <input type="email" class="form-control" name="email" id="signupModalFormSrEmail" placeholder="email@address.com" aria-label="email@address.com" required data-msg="Please enter a valid email address.">
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="signupModalFormSrPassword">Password</label>
+              <input type="password" class="form-control" name="password" id="signupModalFormSrPassword" placeholder="8+ characters required" aria-label="8+ characters required" required data-msg="Your password is invalid. Please try again.">
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="signupModalFormSrConfirmPassword">Confirm password</label>
+              <input type="password" class="form-control" name="confirmPassword" id="signupModalFormSrConfirmPassword" placeholder="8+ characters required" aria-label="8+ characters required" required data-msg="Password does not match the confirm password.">
+            </div>
+            <!-- End Form Group -->
+
+            <button type="submit" class="btn btn-block btn-primary">Sign up</button>
+
+            <div class="text-center mt-3">
+              <p class="font-size-1 mb-0">By continuing you agree to our <a href="#">Terms and Conditions</a></p>
+            </div>
+          </div>
+          <!-- End Sign up with Modal -->
+
+          <!-- Forgot Password -->
+          <div id="forgotPasswordModalForm" style="display: none; opacity: 0;">
+            <div class="text-center mb-5">
+              <h2>Forgot password?</h2>
+              <p>Enter the email address you used when you joined and we'll send you instructions to reset your password.</p>
+            </div>
+
+            <!-- Form Group -->
+            <div class="js-form-message form-group">
+              <label class="input-label" for="resetPasswordSrEmail" tabindex="0">
+                <span class="d-flex justify-content-between align-items-center">
+                  Your email
+                  <a class="js-animation-link d-flex align-items-center link text-muted" href="javascript:;"
+                     data-hs-show-animation-options='{
+                       "targetSelector": "#signinModalForm",
+                       "groupName": "idForm"
+                     }'>
+                    <i class="fas fa-angle-left mr-2"></i> Back to Sign in
+                  </a>
+                </span>
+              </label>
+              <input type="email" class="form-control" name="email" id="resetPasswordSrEmail" tabindex="1" placeholder="Enter your email address" aria-label="Enter your email address" required data-msg="Please enter a valid email address.">
+            </div>
+            <!-- End Form Group -->
+
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+          </div>
+          <!-- End Forgot Password -->
+        </form>
+      </div>
+      <!-- End Body -->
+
+      <!-- Footer -->
+      <div class="modal-footer d-block text-center py-sm-5">
+        <small class="text-cap mb-4">Trusted by the world's best teams</small>
+
+        <div class="w-85 mx-auto">
+          <div class="row justify-content-between">
+            <div class="col">
+              <img class="img-fluid" src="./assets/svg/brands/gitlab-gray.svg" alt="Image Description">
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="./assets/svg/brands/fitbit-gray.svg" alt="Image Description">
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="./assets/svg/brands/flow-xo-gray.svg" alt="Image Description">
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="./assets/svg/brands/layar-gray.svg" alt="Image Description">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+  </div>
+</div>
+<!-- End Sign Up Modal -->
+<!-- ========== END SECONDARY CONTENTS ========== -->
+
+<!-- Go to Top -->
+<a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+   data-hs-go-to-options='{
+     "offsetTop": 700,
+     "position": {
+       "init": {
+         "right": 15
+       },
+       "show": {
+         "bottom": 15
+       },
+       "hide": {
+         "bottom": -15
+       }
+     }
+   }'>
+  <i class="fas fa-angle-up"></i>
+</a>
+<!-- End Go to Top -->
+
+
+<!-- JS Implementing Plugins -->
+<script src="./assets/js/vendor.min.js"></script>
 
 <!-- JS Front -->
 <script src="./assets/js/theme.min.js"></script>
 
+<!-- JS Plugins Init. -->
+<script>
+  $(document).on('ready', function () {
+    // INITIALIZATION OF HEADER
+    // =======================================================
+    var header = new HSHeader($('#header')).init();
+
+
+    // INITIALIZATION OF MEGA MENU
+    // =======================================================
+    var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+      desktop: {
+        position: 'left'
+      }
+    }).init();
+
+
+    // INITIALIZATION OF UNFOLD
+    // =======================================================
+    var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+
+    // INITIALIZATION OF SHOW ANIMATIONS
+    // =======================================================
+    $('.js-animation-link').each(function () {
+      var showAnimation = new HSShowAnimation($(this)).init();
+    });
+
+
+    // INITIALIZATION OF FORM VALIDATION
+    // =======================================================
+    $('.js-validate').each(function() {
+      $.HSCore.components.HSValidation.init($(this), {
+        rules: {
+          confirmPassword: {
+            equalTo: '#signupPassword'
+          }
+        }
+      });
+    });
+
+
+    // INITIALIZATION OF GO TO
+    // =======================================================
+    $('.js-go-to').each(function () {
+      var goTo = new HSGoTo($(this)).init();
+    });
+  });
+</script>
+
 <!-- IE Support -->
 <script>
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
+  if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
 </script>
 </body>
 </html>
