@@ -10,16 +10,33 @@
 <body>
   <div id="selectCardPage" class="wrap">
     <header>
-      <a href="main.html">
+      <a href="https://tecreter.github.io/">
         <img src="img/logo.svg"/>
       </a>
       <div class="top_btn">
-        <a>
-          <img src="img/translation.svg"/>
-        </a>
-        <a id="searchBtn">
+        <div id="select-lang-area" class="select_lang_area">
+            <a id="select-lang-korean" class="gnb_button">
+              <img src="img/translation.svg"/>
+            </a>
+            <a id="select-lang-english" class="gnb_button" style="display: none;">
+              <img src="img/translation2.svg"/>
+            </a>
+            <ul class="select_lang">
+              <li id="lang-korean" class="lang_li active">
+                <a href="#">
+                  한국어
+                </a>
+              </li>
+              <li id="lang-english" class="lang_li">
+                <a href="#">
+                  English
+                </a>
+              </li>
+            </ul>
+          </div>
+        <!-- <a id="searchBtn">
           <img src="img/menu.svg"/>
-        </a>
+        </a> -->
       </div>
     </header>
     <div class="container">
@@ -31,51 +48,10 @@
       <div class="main_text">
         <span class="sub_title">오늘 하루를 떠올리며 카드를 골라주세요.</span>
       </div>
-      <div class="select_card_area">
-        <ul class="card_container">
-            <li class="select_card selected">
-                <img src="img/tarot/cups_3.png"/>
-            </li>
-            <li class="select_card active">
-                <span class="card_order">2번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-        </ul>
-        <button class="contained_button blue" style="width: 40%;">자동 선택</button>
-      </div>
-      <div class="main_divider">
-        <span class="divider_line" style="width: 100%;"></span>
-      </div>
       <div class="choosing_card_area">
         <div class="mixing_card_area">
             <button class="outlined_button primary">카드 섞기</button>
-            <div class="description">
-                <span>아래에서 카드를 골라주세요.</span>
-            </div>
+            <button type="button" onclick="location.href='https://tecreter.github.io/result.html'" class="contained_button blue" style="width: 100%; margin-left: 16px;">자동 선택</button>
         </div>
         <ul class="tarot_cards_area">
             <li class="tarot_card">
@@ -259,6 +235,44 @@
                 </div>
             </li>
         </ul>
+      </div>
+      <div class="select_card_area">
+        <ul class="card_container">
+            <li class="select_card selected">
+                <img src="img/tarot/cups_3.png"/>
+            </li>
+            <li class="select_card active">
+                <span class="card_order">2번 째</span>
+                <span>카드</span>
+            </li>
+            <li class="select_card">
+                <span class="card_order">3번 째</span>
+                <span>카드</span>
+            </li>
+            <li class="select_card">
+                <span class="card_order">3번 째</span>
+                <span>카드</span>
+            </li>
+            <li class="select_card">
+                <span class="card_order">3번 째</span>
+                <span>카드</span>
+            </li>
+            <li class="select_card">
+                <span class="card_order">3번 째</span>
+                <span>카드</span>
+            </li>
+            <li class="select_card">
+                <span class="card_order">3번 째</span>
+                <span>카드</span>
+            </li>
+            <li class="select_card">
+                <span class="card_order">3번 째</span>
+                <span>카드</span>
+            </li>
+        </ul>
+      </div>
+      <div class="main_divider">
+        <span class="divider_line" style="width: 100%;"></span>
       </div>
   </div>
 

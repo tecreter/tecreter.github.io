@@ -10,16 +10,33 @@
 <body>
   <div id="resultdPage" class="wrap">
     <header>
-      <a href="main.html">
+      <a href="https://tecreter.github.io/">
         <img src="img/logo.svg"/>
       </a>
       <div class="top_btn">
-        <a>
-          <img src="img/translation.svg"/>
-        </a>
-        <a id="searchBtn">
+        <div id="select-lang-area" class="select_lang_area">
+          <a id="select-lang-korean" class="gnb_button">
+            <img src="img/translation.svg"/>
+          </a>
+          <a id="select-lang-english" class="gnb_button" style="display: none;">
+            <img src="img/translation2.svg"/>
+          </a>
+          <ul class="select_lang">
+            <li id="lang-korean" class="lang_li active">
+              <a href="#">
+                한국어
+              </a>
+            </li>
+            <li id="lang-english" class="lang_li">
+              <a href="#">
+                English
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- <a id="searchBtn">
           <img src="img/menu.svg"/>
-        </a>
+        </a> -->
       </div>
     </header>
     <div class="container">
@@ -87,13 +104,9 @@
         <span class="divider_line" style="width: 100%;"></span>
       </div>
       <div class="result_button_area">
-        <div class="two_button_area">
-            <a class="outlined_button white">
-                <img src="img/LinkOutlined.svg"/>
-                링크 복사</a>
-            <a class="contained_button yellow">
-                <img src="img/kakao_logo.png"/>카톡 공유</a>
-        </div>
+        <a class="outlined_button white" style="margin-bottom: 16px;">
+          <img src="img/LinkOutlined.svg"/>
+          공유하기</a>
         <a class="outlined_button pink">
             <img src="img/chat_paste.svg"/>
             서비스 피드백 보내기</a>

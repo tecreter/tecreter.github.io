@@ -113,6 +113,10 @@ h1 {
     background: $trueBlue;
     color: $white;
 
+    a {
+      color: $white;
+    }
+
     &:hover {
       background: #1E3375;
     }
@@ -121,6 +125,10 @@ h1 {
   &.primary {
     background: $primary;
     color: $white;
+
+    a {
+      color: $white;
+    }
 
     &:hover {
       background: #DAA63B;
@@ -131,6 +139,10 @@ h1 {
     background: $trueYellow;
     color: $grey_90;
     font-weight: 600;
+
+    a {
+      color: $grey_90;
+    }
 
     &:hover {
       background: #EDC10D;
@@ -152,7 +164,7 @@ h1 {
   border: 2px solid;
   border-radius: 8px;
   font-size: $px16;
-  padding: $px16 $px16;
+  padding: 13px $px16;
   width: 100%;
   cursor: pointer;
   list-style: none;
@@ -200,6 +212,7 @@ body {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  padding-bottom: 60px;
 }
 
 a, a:hover, a:active, a:focus, a:visited {
@@ -214,7 +227,7 @@ a, a:hover, a:active, a:focus, a:visited {
   margin: 0 auto;
 
   header{
-    padding: $px16 $px24;
+    padding: $px8 $px24;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -222,6 +235,8 @@ a, a:hover, a:active, a:focus, a:visited {
     position: sticky;
     top: 0;
     z-index: 10;
+    background: rgba(51, 49, 96, 0.15);
+    backdrop-filter: blur(4.5px);
 
     h1 {
       font-size: $px24;
@@ -233,8 +248,56 @@ a, a:hover, a:active, a:focus, a:visited {
       display: flex;
       align-items: center;
       grid-gap: $px12;
-      a{
+
+      .select_lang_area {
+        display: block;
+        flex-direction: column;
+      }
+
+      .gnb_button {
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $px8;
+        border-radius: $px40;
+
+        &:hover {
+          background: $purple_400;
+        }
+
+        &.active {
+          background: $purple_400;
+        }
+      }
+
+      .select_lang {
+        background: $white;
+        border-radius: $px8;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        right: 0;
+
+        .lang_li {
+          cursor: pointer;
+          display: flex;
+          padding: $px8 $px16;
+          border-radius: $px8;
+
+          a {
+            color: $grey_90;
+          }
+
+          &:hover {
+            background: $grey_10;
+          }
+
+          &.active {
+            background: $grey_10;
+          }
+        }
       }
     }
   }
@@ -268,6 +331,7 @@ a, a:hover, a:active, a:focus, a:visited {
       flex-direction: column;
       align-items: center;
       margin-bottom: $px24;
+      padding: 0 $px24;
 
       .sub_title {
         font-size: $px20;
@@ -288,6 +352,10 @@ a, a:hover, a:active, a:focus, a:visited {
     .img_area {
       width: 100%;
       margin-bottom: $px24;
+
+      img {
+        width: 100%;
+      }
     }
 
     .cta_area {
@@ -402,6 +470,7 @@ a, a:hover, a:active, a:focus, a:visited {
       width: 100%;
       display: flex;
       flex-direction: column;
+      padding-bottom: 60px;
 
       .mixing_card_area {
         width: 100%;
