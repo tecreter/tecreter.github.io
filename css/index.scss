@@ -1,59 +1,51 @@
 @charset "utf-8";
-/* CSS Document */
 
-@import 'reset.scss';
+@import "reset.scss";
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform:translateY(-50px);
-
+    transform: translateY(-50px);
   }
 
   to {
     opacity: 1;
-    transform:none;
+    transform: none;
   }
-  
 }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform:translateX(20px);
-
+    transform: translateX(20px);
   }
 
   to {
     opacity: 1;
-    transform:none;
+    transform: none;
   }
-
 }
 
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform:translateX(-20px);
-
+    transform: translateX(-20px);
   }
 
   to {
     opacity: 1;
-    transform:none;
+    transform: none;
   }
-
 }
 
 @keyframes fadeIndown {
   0% {
-    clip-path:polygon(00% 00%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(00% 00%, 100% 0%, 100% 100%, 0% 100%);
   }
 
   to {
-    transform:translateY(100%);
+    transform: translateY(100%);
   }
-
 }
 
 @keyframes titleTrans {
@@ -65,9 +57,8 @@
 
   to {
     opacity: 1;
-    transform:scale(1);
+    transform: scale(1);
     transform-origin: center center;
-
   }
 }
 
@@ -80,9 +71,8 @@
 
   to {
     opacity: 1;
-    transform:scale(1);
+    transform: scale(1);
     transform-origin: left center;
-
   }
 }
 
@@ -118,7 +108,7 @@ h1 {
     }
 
     &:hover {
-      background: #1E3375;
+      background: #1e3375;
     }
   }
 
@@ -131,7 +121,7 @@ h1 {
     }
 
     &:hover {
-      background: #DAA63B;
+      background: #daa63b;
     }
   }
 
@@ -145,13 +135,13 @@ h1 {
     }
 
     &:hover {
-      background: #EDC10D;
+      background: #edc10d;
     }
   }
 
   &.white {
     border-color: $white;
-    color: $white
+    color: $white;
   }
 
   &:disabled {
@@ -202,21 +192,28 @@ h1 {
 }
 
 body {
-  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-  background:linear-gradient(rgba(52,50,97, 1), rgba(15,15,43, 1));
-  font-family: "Pretendard-Regular", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  margin:0px;
-  padding:0px;
-  text-transform:uppercase;
+  -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  background: linear-gradient(rgba(52, 50, 97, 1), rgba(15, 15, 43, 1));
+  font-family: "Pretendard-Regular", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
   padding-bottom: 60px;
 }
 
-a, a:hover, a:active, a:focus, a:visited {
-  text-decoration:none;
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  text-decoration: none;
 }
 
 .wrap {
@@ -226,7 +223,7 @@ a, a:hover, a:active, a:focus, a:visited {
   position: relative;
   margin: 0 auto;
 
-  header{
+  header {
     padding: $px8 $px24;
     display: flex;
     justify-content: space-between;
@@ -343,10 +340,7 @@ a, a:hover, a:active, a:focus, a:visited {
       .title {
         font-family: GmarketSansMedium;
         color: $primary;
-
       }
-
-
     }
 
     .img_area {
@@ -380,87 +374,10 @@ a, a:hover, a:active, a:focus, a:visited {
         width: 100%;
         padding: 0 0 $px16 0;
         display: flex;
-        
+
         li {
           &:first-child {
             margin-right: $px16;
-          }
-        }
-      }
-    }
-
-    .select_card_area {
-      padding: 0 $px24 $px24 $px24;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-
-      .card_container {
-        width: 100%;
-        min-height: 300px;
-        display: flex;
-        flex-wrap: nowrap;
-        margin-bottom: $px16;
-        overflow-x: auto;
-
-        &::-webkit-scrollbar {
-          height: 12px;
-          border-radius: 99px;
-        }
-        &::-webkit-scrollbar-track {
-          background-color: #1B1B3E;
-          border-radius: 99px;
-        }
-        &::-webkit-scrollbar-thumb { 
-          background-color: #CCCCCC;
-          border-radius: 99px;
-
-          &:hover {
-            transition: 1s;
-            transform: scale(1.2);
-          }
-        }
-        &::-webkit-scrollbar-button {
-          display: none;
-        }
-
-        .select_card {
-          width: 121px;
-          height: 194px;
-          display: flex;
-          flex-shrink: 0;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border-radius: $px8;
-          margin-bottom: $px16;
-          margin-right: $px16;
-          background:linear-gradient(rgba(52,50,97, 1), rgba(15,15,43, 1));
-
-          &:last-child{
-            margin-right: 0;
-          }
-
-          &.active {
-            border: 2px solid $primary;
-          }
-
-          &.selected {
-            img {
-              width: 121px;
-              height: 192px;
-            }
-          }
-
-          span {
-            color: $primary;
-            font-size: $px16;
-          }
-  
-          .card_order {
-            font-weight: bold;
-            margin-bottom: $px8;
           }
         }
       }
@@ -470,7 +387,7 @@ a, a:hover, a:active, a:focus, a:visited {
       width: 100%;
       display: flex;
       flex-direction: column;
-      padding-bottom: 60px;
+      padding-bottom: 30px;
 
       .mixing_card_area {
         width: 100%;
@@ -502,23 +419,24 @@ a, a:hover, a:active, a:focus, a:visited {
 
       .tarot_cards_area {
         width: 100%;
-        height: 300px;
         perspective: 1000px;
         padding: $px24 $px24;
         overflow-x: scroll;
         white-space: nowrap;
-        text-align: center;
+        // text-align: center;
 
         &::-webkit-scrollbar {
-          height: 12px;
+          height: 5px;
           border-radius: 99px;
         }
+
         &::-webkit-scrollbar-track {
-          background-color: #1B1B3E;
+          background-color: #1b1b3e;
           border-radius: 99px;
         }
-        &::-webkit-scrollbar-thumb { 
-          background-color: #CCCCCC;
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #cccccc;
           border-radius: 99px;
 
           &:hover {
@@ -526,50 +444,58 @@ a, a:hover, a:active, a:focus, a:visited {
             transform: scale(1.2);
           }
         }
+
         &::-webkit-scrollbar-button {
           display: none;
         }
 
         .tarot_card {
-          width: 121px;
-          height: 194px;
+          width: 80px;
+          height: 134px;
           display: inline-block;
           position: relative;
-          transform-style: preserve-3d;
-          transition: 1s;
-          transform: rotateY('0deg');
-          cursor: pointer;
-          margin: 0 -36px;
+          user-select: none;
+          // transform-style: preserve-3d;
+          // transition: 1s;
+          // transform: rotateY('0deg');
+          // cursor: pointer;
+          margin: 0 -22px;
 
           &:first-child {
-            margin: 0;
+            margin: 0 -22px 0 -22px;
           }
 
-          &:hover {
-            transform: rotateY(180deg);
-            transition: 1.2s;
-            z-index: 1;
+          // &:hover {
+          //   transform: rotateY(180deg);
+          //   transition: 1.2s;
+          //   z-index: 1;
 
-            .front {
-              display: flex;
-              z-index: 1;
-            }
+          //   .front {
+          //     display: flex;
+          //     z-index: 1;
+          //   }
 
-            .back {
-              display: none;
-            }
-          }
+          //   .back {
+          //     display: none;
+          //   }
+          // }
 
           .front {
-            position: absolute;
+            //   position: absolute;
             display: none;
-            justify-content: center;
-            align-items: center;
-            border-radius: $px8;
+            //   justify-content: center;
+            //   align-items: center;
+            //   border-radius: $px8;
 
-            img {
-              width: 121px;
-              height: 192px;
+            //   img {
+            //     width: 121px;
+            //     height: 192px;
+            //   }
+          }
+
+          &.y {
+            .back {
+              margin-top: -18px;
             }
           }
 
@@ -579,7 +505,6 @@ a, a:hover, a:active, a:focus, a:visited {
             position: absolute;
             z-index: 1;
             background: $grey_90;
-            padding: $px4;
             border-radius: $px8;
 
             .contents {
@@ -590,7 +515,107 @@ a, a:hover, a:active, a:focus, a:visited {
               justify-content: center;
               align-items: center;
               border-radius: $px8;
+
+              img {
+                width: 42px;
+                height: 73px;
+              }
             }
+          }
+        }
+      }
+      .card_wrap {
+        .loader {
+          display: flex;
+          height: 190px;
+          justify-content: space-around;
+          align-items: center;
+          z-index: 100;
+          position: absolute;
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .select_card_area {
+
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 60px;
+
+      // padding: 0 $px24 $px24 $px24;
+      // display: flex;
+      // width: 100%;
+      // flex-direction: column;
+      // align-items: center;
+
+      .card_container {
+        width: 100%;
+        padding: 1.5rem 0;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          height: 5px;
+          border-radius: 99px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: #1b1b3e;
+          border-radius: 99px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #cccccc;
+          border-radius: 99px;
+
+          &:hover {
+            transition: 1s;
+            transform: scale(1.2);
+          }
+        }
+
+        &::-webkit-scrollbar-button {
+          display: none;
+        }
+
+        .select_card {
+          width: 121px;
+          height: 194px;
+          display: flex;
+          flex-shrink: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: $px14;
+          background: linear-gradient(rgba(52, 50, 97, 1), rgba(15, 15, 43, 1));
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.active {
+            border: 2px solid $primary;
+          }
+
+          &.selected {
+            img {
+              width: 121px;
+              height: 192px;
+            }
+          }
+
+          span {
+            color: $primary;
+            font-size: $px16;
+          }
+
+          .card_order {
+            font-weight: bold;
+            margin-bottom: $px8;
           }
         }
       }
@@ -641,7 +666,7 @@ a, a:hover, a:active, a:focus, a:visited {
           color: $trueYellow;
           font-weight: bold;
           margin-bottom: $px12;
-          
+
           .title {
             margin-right: $px4;
           }
@@ -679,10 +704,4 @@ a, a:hover, a:active, a:focus, a:visited {
       }
     }
   }
-
 }
-
-
-
-
-

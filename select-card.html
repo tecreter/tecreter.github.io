@@ -1,281 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="css/index.css"/>
-  <title>True Future</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="타로카드 스프레드 도우미">
+    <meta name="keywords" content="타로카드, 타로, 타로카드 스프레드, 타로 스프레드, 스프레드">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/index.css"/>
+    <title>True Future</title>
 </head>
 <body>
-  <div id="selectCardPage" class="wrap">
+<div id="selectCardPage" class="wrap">
     <header>
-      <a href="https://tecreter.github.io/">
-        <img src="img/logo.svg"/>
-      </a>
-      <div class="top_btn">
-        <div id="select-lang-area" class="select_lang_area">
-            <a id="select-lang-korean" class="gnb_button">
-              <img src="img/translation.svg"/>
-            </a>
-            <a id="select-lang-english" class="gnb_button" style="display: none;">
-              <img src="img/translation2.svg"/>
-            </a>
-            <ul class="select_lang">
-              <li id="lang-korean" class="lang_li active">
-                <a href="#">
-                  한국어
+        <a href="https://tecreter.github.io/">
+            <img src="./img/logo.svg"/>
+        </a>
+        <div class="top_btn">
+            <div id="select-lang-area" class="select_lang_area">
+                <a id="select-lang-korean" class="gnb_button">
+                    <img src="./img/translation.svg"/>
                 </a>
-              </li>
-              <li id="lang-english" class="lang_li">
-                <a href="#">
-                  English
+                <a id="select-lang-english" class="gnb_button" style="display: none;">
+                    <img src="./img/translation2.svg"/>
                 </a>
-              </li>
-            </ul>
-          </div>
-        <!-- <a id="searchBtn">
-          <img src="img/menu.svg"/>
-        </a> -->
-      </div>
+                <ul class="select_lang">
+                    <li id="lang-korean" class="lang_li active">
+                        <a href="#">
+                            한국어
+                        </a>
+                    </li>
+                    <li id="lang-english" class="lang_li">
+                        <a href="#">
+                            English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <a id="searchBtn">
+              <img src="./img/menu.svg"/>
+            </a> -->
+        </div>
     </header>
     <div class="container">
-      <div class="main_divider">
-        <span class="divider_line"></span>
-        <img src="img/img_divider.svg"/>
-        <span class="divider_line"></span>
-      </div>
-      <div class="main_text">
-        <span class="sub_title">오늘 하루를 떠올리며 카드를 골라주세요.</span>
-      </div>
-      <div class="choosing_card_area">
-        <div class="mixing_card_area">
-            <button class="outlined_button primary">카드 섞기</button>
-            <button type="button" onclick="location.href='https://tecreter.github.io/result.html'" class="contained_button blue" style="width: 100%; margin-left: 16px;">자동 선택</button>
+        <div class="main_divider">
+            <span class="divider_line"></span>
+            <img src="./img/img_divider.svg"/>
+            <span class="divider_line"></span>
         </div>
-        <ul class="tarot_cards_area">
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
+        <div class="main_text">
+            <span class="sub_title">오늘 하루를 떠올리며 카드를 골라주세요.</span>
+        </div>
+        <div class="choosing_card_area">
+            <div class="mixing_card_area">
+                <button class="outlined_button primary" onclick="javascript:shuffleCards();">카드 섞기</button>
+                <button type="button" onclick="location.href='./result.html'" class="contained_button blue" style="width: 100%; margin-left: 16px;">자동 선택</button>
+            </div>
+            <div class="card_wrap">
+                <style>svg path,svg rect{fill: #FF6700;}</style>
+                <div class="loader">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <rect x="0" y="13" width="4" height="5" fill="#333">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                        </rect>
+                        <rect x="10" y="13" width="4" height="5" fill="#333">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                        </rect>
+                        <rect x="20" y="13" width="4" height="5" fill="#333">
+                            <animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                            <animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                        </rect>
+                    </svg>
                 </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
+                <div style="margin:0 10px;"><ol class="tarot_cards_area"></ol></div>
+            </div>
+            <script type="text/template" class="card_template">
+                <li class="tarot_card n" id="card{no}" data-card="{no}">
+                    <div class="back">
+                        <div class="contents">
+                            <img src="./img/card_graphic.svg"/>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-            <li class="tarot_card">
-                <div class="front">
-                    <img src="img/tarot/cups_2.png"/>
-                </div>
-                <div class="back">
-                    <div class="contents">
-                        <img src="img/card_graphic.svg"/>
-                    </div>
-                </div>
-            </li>
-        </ul>
-      </div>
-      <div class="select_card_area">
-        <ul class="card_container">
-            <li class="select_card selected">
-                <img src="img/tarot/cups_3.png"/>
-            </li>
-            <li class="select_card active">
-                <span class="card_order">2번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-            <li class="select_card">
-                <span class="card_order">3번 째</span>
-                <span>카드</span>
-            </li>
-        </ul>
-      </div>
-      <div class="main_divider">
-        <span class="divider_line" style="width: 100%;"></span>
-      </div>
-  </div>
+                </li>
+            </script>
+        </div>
 
-<script src="js/script.js"></script>
+        <div class="select_card_area">
+            <div>
+                <ol class="card_container"></ol>
+            </div>
+            <script type="text/template" class="selected_card_template">
+                <li class="select_card {class1}" id="selected_card{no}">
+                    <span class="card_order {class2}">{no}번 째</span>
+                    <span class="{class3}">카드</span>
+                </li>
+            </script>
+        </div>
+
+        <!-- <div class="select_card_area">
+            <div style="margin:0;">
+                <ul class="card_container">
+                <li class="select_card selected">
+                    <img src="./img/tarot/cups_3.png"/>
+                </li>
+                <li class="select_card active">
+                    <span class="card_order">2번 째</span>
+                    <span>카드</span>
+                </li>
+                <li class="select_card">
+                    <span class="card_order">3번 째</span>
+                    <span>카드</span>
+                </li>
+                <li class="select_card">
+                    <span class="card_order">3번 째</span>
+                    <span>카드</span>
+                </li>
+                <li class="select_card">
+                    <span class="card_order">3번 째</span>
+                    <span>카드</span>
+                </li>
+                <li class="select_card">
+                    <span class="card_order">3번 째</span>
+                    <span>카드</span>
+                </li>
+                <li class="select_card">
+                    <span class="card_order">3번 째</span>
+                    <span>카드</span>
+                </li>
+                <li class="select_card">
+                    <span class="card_order">3번 째</span>
+                    <span>카드</span>
+                </li>
+            </ul>
+            </div>
+        </div> -->
+
+        <!-- <div class="main_divider">
+            <span class="divider_line" style="width: 100%;"></span>
+        </div> -->
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/card.json"></script>
+    <script type="text/javascript">
+        var cardArr = [],
+            cardSelectType = getParameter('t'),
+            cardSelectedCnt = 0,
+            cardSelectedArr = [],
+            trueFutCfgArr = localStorage.getItem('trueFut');
+
+        $(document).ready(function () {
+            _init();
+            $(document).on('click', '.tarot_card', function () {
+                if(cardSelectedCnt < cardSelectType) {
+                    cardSelectedCnt += 1;
+                    cardSelectedArr.push($(this).data('card'));
+                    setCardType();
+                    updateSelectedCard();
+                    $(this).removeClass('n').removeClass('y').addClass('y');
+
+                    // var boxWidth = $(".card_container").width(); 
+                    // $(".card_container").animate({
+                    //     width: boxWidth,
+                    // }, 1000);
+
+                    // if(cardSelectedCnt == cardSelectType) {
+                    //     location.href = './result.html';
+                    // }
+                }
+                else {
+                    alert('카드를 이미 다 골랐어요!');
+                    return false;
+                }
+            });
+        });
+
+        function _init() {
+            shuffleCards();
+            setCardType();
+            updateSelectedCard();
+
+            if(cardSelectType == '') {
+                location.href = './choose-card.html';
+            }
+
+            var wrap = $('.card_container');
+            wrap.html('');
+            var temp = $('.selected_card_template');
+            for(var i = 0; i< cardSelectType; i++) {
+                var html = (i==0) ? temp.html().replace(/\{no\}/gi, i+1).replace(/\{class1\}/gi, 'active') : temp.html().replace(/\{no\}/gi, i+1);
+                wrap.append( html );
+            }
+
+            // var boxWidth = $(".card_container").width(); 
+            // $(".card_container").animate({
+            //     width: boxWidth,
+            // }, 1000);
+
+        }
+
+        function setCardType() {
+            var trueFutCfg = new Object();
+            trueFutCfg.cardType = cardSelectType;
+            trueFutCfg.cardArr = cardSelectedArr;
+            localStorage.setItem('tf', JSON.stringify(trueFutCfg));
+        }
+
+        function shuffleCards() {
+            cardSelectedCnt = 0;
+            cardSelectedArr = [];
+            setCardType();
+
+            $('.card_wrap .loader').show();
+            $('.card_wrap .loader').css('style', 'flex');
+            cardArr = [];
+            var wrap = $('.tarot_cards_area');
+            wrap.html('');
+            var temp = $('.card_template');
+            randomInts(78, 78);
+            for(var i=0; i<cardArr.length; i++) {
+                var html = temp.html().replace(/\{no\}/gi, cardArr[i]);
+                wrap.append( html );
+            }
+            pickUp();
+            updateSelectedCard();
+        }
+
+        function randomInts(quantity, max){
+            while(cardArr.length < quantity){
+                var candidateInt = Math.floor(Math.random() * max);
+                if(cardArr.indexOf(candidateInt) === -1) cardArr.push(candidateInt);
+            }
+            return (cardArr);
+        }
+
+        function pickUp() {
+            for(var i=0; i<cardArr.length; i++) {document.getElementById('card'+cardArr[i]).style.display = 'none';}
+            function show(num) {document.getElementById('card'+num).style.display = 'inline-block';}
+            for (var j=0; j<78 ; j++) {
+                setTimeout(show, j*40, j);
+            }
+
+            setTimeout(function() {
+                $('.card_wrap .loader').hide();
+            }, 3200);
+        }
+        
+        function updateSelectedCard() {
+            var wrap = $('.card_container');
+            wrap.html('');
+
+            
+            
+            var temp = $('.selected_card_template');
+            for(var i = 0; i<cardSelectedArr.length; i++) {
+                var img = '<li class="select_card"><img src="./img/tarot/' + crdJson[cardArr[i]].card_code + '.png"></li>';
+                // var html = temp.html().replace(/\{no\}/gi, crdJson[cardArr[i]].card_code + '.png');
+                wrap.append( img );
+            }
+            
+        }
+    </script>
+</div>
 </body>
 </html>

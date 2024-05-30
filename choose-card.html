@@ -1,137 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="css/index.css"/>
-  <title>True Future</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="타로카드 스프레드 도우미">
+    <meta name="keywords" content="타로카드, 타로, 타로카드 스프레드, 타로 스프레드, 스프레드">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/index.css"/>
+    <title>True Future</title>
 </head>
 <body>
-  <div id="chooseCardPage" class="wrap">
+<div id="chooseCardPage" class="wrap">
     <header>
-      <a href="https://tecreter.github.io/">
-        <img src="img/logo.svg"/>
-      </a>
-      <div class="top_btn">
-        <div id="select-lang-area" class="select_lang_area">
-          <a id="select-lang-korean" class="gnb_button">
-            <img src="img/translation.svg"/>
-          </a>
-          <a id="select-lang-english" class="gnb_button" style="display: none;">
-            <img src="img/translation2.svg"/>
-          </a>
-          <ul class="select_lang">
-            <li id="lang-korean" class="lang_li active">
-              <a href="#">
-                한국어
-              </a>
-            </li>
-            <li id="lang-english" class="lang_li">
-              <a href="#">
-                English
-              </a>
-            </li>
-          </ul>
+        <a href="./">
+            <img src="img/logo.svg"/>
+        </a>
+        <div class="top_btn">
+            <div id="select-lang-area" class="select_lang_area">
+                <a id="select-lang-korean" class="gnb_button">
+                    <img src="img/translation.svg"/>
+                </a>
+                <a id="select-lang-english" class="gnb_button" style="display: none;">
+                    <img src="img/translation2.svg"/>
+                </a>
+                <ul class="select_lang">
+                    <li id="lang-korean" class="lang_li active">
+                        <a href="#">
+                            한국어
+                        </a>
+                    </li>
+                    <li id="lang-english" class="lang_li">
+                        <a href="#">
+                            English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <a id="searchBtn">
+              <img src="img/menu.svg"/>
+            </a> -->
         </div>
-        <!-- <a id="searchBtn">
-          <img src="img/menu.svg"/>
-        </a> -->
-      </div>
     </header>
     <div class="container">
-      <div class="main_divider">
-        <span class="divider_line"></span>
-        <img src="img/img_divider.svg"/>
-        <span class="divider_line"></span>
-      </div>
-      <div class="main_text">
-        <span class="sub_title">오늘 하루를 몇 장의 카드로 볼까요?</span>
-      </div>
-      <div class="button_area">
-        <ul class="card_area">
-            <li class="contained_button blue">
-              <a href="https://tecreter.github.io/select-card.html">
-                1 카드
-              </a>
-            </li>
-            <li class="contained_button blue">
-              <a href="https://tecreter.github.io/select-card.html">
-                2 카드
-              </a>
-            </li>  
-        </ul>
-        <ul class="card_area">
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              3 카드
-            </a>
-          </li>
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              4 카드
-            </a>
-          </li> 
-        </ul>
-        <ul class="card_area">
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              5 카드
-            </a>
-          </li>
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              6 카드
-            </a>
-          </li> 
-        </ul>
-        <ul class="card_area">
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              7 카드
-            </a>
-          </li>
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              8 카드
-            </a>
-          </li> 
-        </ul>
-        <ul class="card_area">
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              9 카드
-            </a>
-          </li>
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              10 카드
-            </a>
-          </li> 
-        </ul>
-        <ul class="card_area">
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              11 카드
-            </a>
-          </li>
-          <li class="contained_button blue">
-            <a href="https://tecreter.github.io/select-card.html">
-              12 카드
-            </a>
-          </li> 
-        </ul>
-        <li class="contained_button blue">
-          <a href="https://tecreter.github.io/select-card.html">
-            24 카드
-          </a>
-        </li>
-      </div>
-      <div class="main_divider">
-        <span class="divider_line" style="width: 100%;"></span>
-      </div>
-  </div>
-
-<script src="js/script.js"></script>
+        <div class="main_divider">
+            <span class="divider_line"></span>
+            <img src="img/img_divider.svg"/>
+            <span class="divider_line"></span>
+        </div>
+        <div class="main_text">
+            <span class="sub_title">오늘 하루를 몇 장의 카드로 볼까요?</span>
+        </div>
+        <div class="button_area">
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="1">
+                    1 카드
+                </li>
+                <li class="contained_button blue" data-type="2">
+                    2 카드
+                </li>
+            </ul>
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="3">
+                    3 카드
+                </li>
+                <li class="contained_button blue" data-type="4">
+                    4 카드
+                </li>
+            </ul>
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="5">
+                    5 카드
+                </li>
+                <li class="contained_button blue" data-type="6">
+                    6 카드
+                </li>
+            </ul>
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="7">
+                    7 카드
+                </li>
+                <li class="contained_button blue" data-type="8">
+                    8 카드
+                </li>
+            </ul>
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="9">
+                    9 카드
+                </li>
+                <li class="contained_button blue" data-type="10">
+                    10 카드
+                </li>
+            </ul>
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="11">
+                    11 카드
+                </li>
+                <li class="contained_button blue" data-type="12">
+                    12 카드
+                </li>
+            </ul>
+            <ul class="card_area">
+                <li class="contained_button blue" data-type="24" style="margin-right:0;">
+                    24 카드
+                </li>
+            </ul>
+        </div>
+        <div class="main_divider">
+            <span class="divider_line" style="width: 100%;"></span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li.contained_button').click(function () {
+                location.href = './select-card.html?t=' + $(this).data('type');
+            });
+        });
+    </script>
+</div>
 </body>
 </html>
