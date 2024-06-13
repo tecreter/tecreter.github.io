@@ -106,6 +106,22 @@ html button, body button {
     transform-origin: left center;
   }
 }
+@keyframes rotate-axis {
+  from {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(600px) rotateY(360deg);
+  }
+}
+@media screen and (max-width: 600px) {
+  .moving_star {
+    left: 43% !important;
+    top: 42% !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -323,12 +339,18 @@ a:visited {
   align-items: center;
   margin-bottom: 1.5rem;
   padding: 0 1.5rem;
+  text-align: center;
 }
 .wrap .container .main_text .sub_title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #CCCCCC;
-  font-weight: 300;
+  font-weight: 100;
   margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+.wrap .container .main_text .sub_title strong {
+  font-weight: 600;
+  color: #FFFFFF;
 }
 .wrap .container .main_text .title {
   font-family: GmarketSansMedium;
@@ -337,9 +359,27 @@ a:visited {
 .wrap .container .img_area {
   width: 100%;
   margin-bottom: 1.5rem;
+  position: relative;
+  text-align: center;
+  perspective: 1000px;
+}
+.wrap .container .img_area .moving_star {
+  position: absolute;
+  left: 44.5%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  animation: rotate-axis 3.4s cubic-bezier(0.79, 0.08, 0.37, 1.03) infinite;
+  transform-style: preserve-3d;
 }
 .wrap .container .img_area img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.wrap .container .img_area .main_bg_img {
   width: 100%;
+  position: relative;
 }
 .wrap .container .cta_area {
   display: flex;
@@ -531,6 +571,10 @@ a:visited {
   color: #E1AC3F;
   font-size: 1rem;
 }
+.wrap .container .select_card_area .card_container .select_card img {
+  width: 100%;
+  height: auto;
+}
 .wrap .container .select_card_area .card_container .select_card .card_order {
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -544,8 +588,8 @@ a:visited {
   flex-direction: column;
 }
 .wrap .container .result_area .result_card {
-  width: 258px;
-  height: 400px;
+  width: 178px;
+  height: 280px;
   border: 1px solid #E1AC3F;
   display: flex;
   justify-content: center;
@@ -553,7 +597,7 @@ a:visited {
   border-radius: 0.5rem;
 }
 .wrap .container .result_area .result_card img {
-  width: 222px;
+  width: 160px;
 }
 .wrap .container .result_area .text_area {
   width: 100%;
@@ -589,6 +633,15 @@ a:visited {
   text-align: center;
   line-height: 1.4;
   font-weight: 300;
+}
+.wrap .container .result_area .text_area .text_group {
+  text-align: center;
+  margin-top: 1rem;
+}
+.wrap .container .result_area .text_area .subtitle {
+  font-weight: 800;
+  color: #E1AC3F;
+  margin-bottom: 0.5rem;
 }
 .wrap .container .result_button_area {
   display: flex;

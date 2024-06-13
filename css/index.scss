@@ -76,6 +76,24 @@
   }
 }
 
+@keyframes rotate-axis {
+  from {
+      transform: perspective(600px) rotateY(0deg);
+  }
+  to {
+      transform: perspective(600px) rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .moving_star {
+    left: 43% !important;
+    top: 42% !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
 h1 {
   font-size: $px40;
   font-weight: bold;
@@ -329,12 +347,19 @@ a:visited {
       align-items: center;
       margin-bottom: $px24;
       padding: 0 $px24;
+      text-align: center;
 
       .sub_title {
-        font-size: $px20;
+        font-size: $px18;
         color: $grey_20;
-        font-weight: 300;
+        font-weight: 100;
         margin-bottom: $px12;
+        line-height: 1.4;
+
+        strong {
+          font-weight: 600;
+          color: $white;
+        }
       }
 
       .title {
@@ -346,9 +371,28 @@ a:visited {
     .img_area {
       width: 100%;
       margin-bottom: $px24;
+      position: relative;
+      text-align: center;
+      perspective: 1000px;
+
+      .moving_star {
+        position: absolute;
+        left: 44.5%;
+        top: 43%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        animation: rotate-axis 3.4s cubic-bezier(0.79, 0.08, 0.37, 1.03) infinite;
+        transform-style: preserve-3d;
+      }
 
       img {
+        object-fit: contain;
+      }
+
+      .main_bg_img {
         width: 100%;
+        position: relative;
       }
     }
 
@@ -612,7 +656,12 @@ a:visited {
             color: $primary;
             font-size: $px16;
           }
-
+          
+          img {
+            width: 100%;
+            height: auto;
+          }
+          
           .card_order {
             font-weight: bold;
             margin-bottom: $px8;
@@ -631,8 +680,8 @@ a:visited {
       flex-direction: column;
 
       .result_card {
-        width: 258px;
-        height: 400px;
+        width: 178px;
+        height: 280px;
         border: 1px solid $primary;
         display: flex;
         justify-content: center;
@@ -640,7 +689,7 @@ a:visited {
         border-radius: $px8;
 
         img {
-          width: 222px;
+          width: 160px;
         }
       }
 
@@ -682,6 +731,17 @@ a:visited {
           text-align: center;
           line-height: 1.4;
           font-weight: 300;
+        }
+
+        .text_group {
+          text-align: center;
+          margin-top: $px16;
+        }
+
+        .subtitle {
+          font-weight: 800;
+          color: $primary;
+          margin-bottom: $px8;
         }
       }
     }
