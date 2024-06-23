@@ -116,10 +116,10 @@ html button, body button {
 }
 @media screen and (max-width: 600px) {
   .moving_star {
-    left: 43% !important;
-    top: 42% !important;
-    width: 50px !important;
-    height: 50px !important;
+    left: 44.5% !important;
+    top: 42.5% !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 h1 {
@@ -140,6 +140,7 @@ h1 {
   justify-content: center;
   align-items: center;
   display: flex;
+  white-space: nowrap;
 }
 .contained_button img {
   margin-right: 0.5rem;
@@ -196,6 +197,7 @@ h1 {
   justify-content: center;
   align-items: center;
   display: flex;
+  white-space: nowrap;
 }
 .outlined_button img {
   margin-right: 0.5rem;
@@ -342,15 +344,14 @@ a:visited {
   text-align: center;
 }
 .wrap .container .main_text .sub_title {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #CCCCCC;
   font-weight: 100;
   margin-bottom: 0.75rem;
   line-height: 1.4;
 }
 .wrap .container .main_text .sub_title strong {
-  font-weight: 600;
-  color: #FFFFFF;
+  color: #808080;
 }
 .wrap .container .main_text .title {
   font-family: GmarketSansMedium;
@@ -366,7 +367,7 @@ a:visited {
 .wrap .container .img_area .moving_star {
   position: absolute;
   left: 44.5%;
-  top: 43%;
+  top: 42%;
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
@@ -378,8 +379,9 @@ a:visited {
      object-fit: contain;
 }
 .wrap .container .img_area .main_bg_img {
-  width: 100%;
+  width: 80%;
   position: relative;
+  margin: 0 auto;
 }
 .wrap .container .cta_area {
   display: flex;
@@ -389,10 +391,11 @@ a:visited {
   padding: 0 1.5rem;
 }
 .wrap .container .cta_area .sub_text {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
   color: #CCCCCC;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .wrap .container .button_area {
   padding: 0 1.5rem 1.5rem 1.5rem;
@@ -415,10 +418,11 @@ a:visited {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  padding: 0 0.625rem;
   margin-bottom: 1.5rem;
   justify-content: center;
   align-items: center;
+  gap: 0 15px;
 }
 .wrap .container .choosing_card_area .mixing_card_area .description {
   width: 100%;
@@ -547,8 +551,8 @@ a:visited {
   display: none;
 }
 .wrap .container .select_card_area .card_container .select_card {
-  width: 121px;
-  height: 194px;
+  width: 81px;
+  height: 141px;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
@@ -588,8 +592,8 @@ a:visited {
   flex-direction: column;
 }
 .wrap .container .result_area .result_card {
-  width: 178px;
-  height: 280px;
+  width: 142px;
+  height: 225px;
   border: 1px solid #E1AC3F;
   display: flex;
   justify-content: center;
@@ -597,7 +601,7 @@ a:visited {
   border-radius: 0.5rem;
 }
 .wrap .container .result_area .result_card img {
-  width: 160px;
+  width: 130px;
 }
 .wrap .container .result_area .text_area {
   width: 100%;
@@ -610,7 +614,7 @@ a:visited {
 }
 .wrap .container .result_area .text_area .sub_text {
   color: #FECD04;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
@@ -628,7 +632,7 @@ a:visited {
   font-size: 1.125rem;
 }
 .wrap .container .result_area .text_area .description {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #CCCCCC;
   text-align: center;
   line-height: 1.4;
@@ -639,6 +643,7 @@ a:visited {
   margin-top: 1rem;
 }
 .wrap .container .result_area .text_area .subtitle {
+  font-size: 0.875rem;
   font-weight: 800;
   color: #E1AC3F;
   margin-bottom: 0.5rem;

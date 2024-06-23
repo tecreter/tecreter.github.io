@@ -48,12 +48,13 @@
             <span class="divider_line"></span>
         </div>
         <div class="main_text">
-            <span class="sub_title">생각한 시간과 이벤트를 떠올리며 아래에서 카드를 선택해 주세요.</span>
+            <span class="sub_title">미래를 떠올리며 아래에서 카드를 선택해 주세요.</span>
         </div>
         <div class="choosing_card_area">
             <div class="mixing_card_area">
                 <button class="outlined_button primary" onclick="javascript:shuffleCards();">카드 섞기</button>
-                <button type="button" class="contained_button blue" style="width: 100%; margin-left: 16px;">선택</button>
+                <button type="button" class="contained_button blue custom">선택</button>
+                <button type="button" class="contained_button blue auto">자동 선택</button>
             </div>
             <div class="card_wrap">
                 <style>svg path,svg rect{fill: #FF6700;}</style>
@@ -177,7 +178,7 @@
                 }
             });
 
-            $(document).on('click', '.contained_button', function() {
+            $(document).on('click', '.contained_button.custom', function() {
                 if(cardSelectedCnt < cardSelectType) {
                     alert(cardSelectType - cardSelectedCnt + '장의 카드를 골라주세요!');
                     return false;
@@ -185,7 +186,16 @@
                 else {
                      location.href='./result.html';
                 }
-            })
+            });
+
+            $(document).on('click', '.contained_button.auto', function() {
+                for(var i=0;i<cardSelectType;i++) {
+                    cardSelectedCnt += 1;
+                    cardSelectedArr.push( randomInts()[i] );
+                    setCardType();
+                }
+                location.href='./result.html';
+            });
         });
 
         function _init() {

@@ -87,10 +87,10 @@
 
 @media screen and (max-width: 600px) {
   .moving_star {
-    left: 43% !important;
-    top: 42% !important;
-    width: 50px !important;
-    height: 50px !important;
+    left: 44.5% !important;
+    top: 42.5% !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
@@ -112,6 +112,7 @@ h1 {
   justify-content: center;
   align-items: center;
   display: flex;
+  white-space: nowrap;
 
   img {
     margin-right: $px8;
@@ -180,6 +181,7 @@ h1 {
   justify-content: center;
   align-items: center;
   display: flex;
+  white-space: nowrap;
 
   img {
     margin-right: $px8;
@@ -350,15 +352,14 @@ a:visited {
       text-align: center;
 
       .sub_title {
-        font-size: $px18;
+        font-size: $px16;
         color: $grey_20;
         font-weight: 100;
         margin-bottom: $px12;
         line-height: 1.4;
 
         strong {
-          font-weight: 600;
-          color: $white;
+          color: $grey_50;
         }
       }
 
@@ -378,7 +379,7 @@ a:visited {
       .moving_star {
         position: absolute;
         left: 44.5%;
-        top: 43%;
+        top: 42%;
         transform: translate(-50%, -50%);
         width: 70px;
         height: 70px;
@@ -391,8 +392,9 @@ a:visited {
       }
 
       .main_bg_img {
-        width: 100%;
+        width: 80%;
         position: relative;
+        margin: 0 auto;
       }
     }
 
@@ -404,10 +406,11 @@ a:visited {
       padding: 0 $px24;
 
       .sub_text {
-        font-size: $px18;
+        font-size: $px16;
         font-weight: 300;
         color: $grey_20;
         margin-bottom: $px16;
+        text-align: center;
       }
     }
 
@@ -437,10 +440,11 @@ a:visited {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 0 $px24;
+        padding: 0 $px10;
         margin-bottom: $px24;
         justify-content: center;
         align-items: center;
+        gap: 0 15px;
 
         .description {
           width: 100%;
@@ -627,8 +631,8 @@ a:visited {
         }
 
         .select_card {
-          width: 121px;
-          height: 194px;
+          width: 81px;
+          height: 141px;
           display: flex;
           flex-shrink: 0;
           flex-direction: column;
@@ -680,8 +684,8 @@ a:visited {
       flex-direction: column;
 
       .result_card {
-        width: 178px;
-        height: 280px;
+        width: 142px;
+        height: 225px;
         border: 1px solid $primary;
         display: flex;
         justify-content: center;
@@ -689,7 +693,7 @@ a:visited {
         border-radius: $px8;
 
         img {
-          width: 160px;
+          width: 130px;
         }
       }
 
@@ -704,7 +708,7 @@ a:visited {
 
         .sub_text {
           color: $trueYellow;
-          font-size: $px20;
+          font-size: $px16;
           font-weight: 600;
           margin-bottom: $px12;
         }
@@ -726,7 +730,7 @@ a:visited {
         }
 
         .description {
-          font-size: $px16;
+          font-size: $px14;
           color: $grey_20;
           text-align: center;
           line-height: 1.4;
@@ -739,6 +743,7 @@ a:visited {
         }
 
         .subtitle {
+          font-size: $px14;
           font-weight: 800;
           color: $primary;
           margin-bottom: $px8;
