@@ -123,15 +123,16 @@ html button, body button {
   }
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .contained_button {
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
-  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.5rem;
+  height: 40px;
   width: 100%;
   cursor: pointer;
   list-style: none;
@@ -140,7 +141,7 @@ h1 {
   justify-content: center;
   align-items: center;
   display: flex;
-  white-space: nowrap;
+  line-height: 1;
 }
 .contained_button img {
   margin-right: 0.5rem;
@@ -157,10 +158,15 @@ h1 {
 }
 .contained_button.primary {
   background: #E1AC3F;
-  color: #FFFFFF;
+  color: #212121;
+  font-weight: 800;
+  height: 48px;
 }
 .contained_button.primary a {
-  color: #FFFFFF;
+  color: #212121;
+}
+.contained_button.primary .disabled {
+  opacity: 36%;
 }
 .contained_button.primary:hover {
   background: #daa63b;
@@ -184,11 +190,44 @@ h1 {
   opacity: 26%;
 }
 
+.contained_button_primary {
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 0.875rem 1.5rem;
+  height: 48px;
+  width: 100%;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 1;
+  font-weight: 800;
+  color: #212121;
+  background-color: #E1AC3F;
+}
+.contained_button_primary img {
+  margin-right: 0.5rem;
+}
+.contained_button_primary a {
+  color: #212121;
+}
+.contained_button_primary:hover {
+  background: #daa63b;
+}
+.contained_button_primary.disabled {
+  opacity: 26%;
+  z-index: 1000;
+}
+
 .outlined_button {
   background: none;
   border: 2px solid;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   padding: 13px 1rem;
   width: 100%;
   cursor: pointer;
@@ -197,7 +236,8 @@ h1 {
   justify-content: center;
   align-items: center;
   display: flex;
-  white-space: nowrap;
+  line-height: 1;
+  height: 40px;
 }
 .outlined_button img {
   margin-right: 0.5rem;
@@ -248,6 +288,20 @@ a:visited {
   flex-direction: column;
   position: relative;
   margin: 0 auto;
+}
+.wrap .bottom_cta_area {
+  width: 100%;
+  max-width: 600px;
+  position: fixed;
+  bottom: 0;
+}
+.wrap .bottom_cta_area button {
+  border-radius: 0;
+}
+.wrap .bottom_cta_area .icon_arrow {
+  position: absolute;
+  right: 1rem;
+  top: 13px;
 }
 .wrap header {
   padding: 0.5rem 1.5rem;
@@ -323,7 +377,7 @@ a:visited {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .wrap .container .main_divider .divider_line {
   width: 48%;
@@ -339,7 +393,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding: 0 1.5rem;
   text-align: center;
 }
@@ -347,7 +401,7 @@ a:visited {
   font-size: 1rem;
   color: #CCCCCC;
   font-weight: 100;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
 }
 .wrap .container .main_text .sub_title strong {
@@ -359,7 +413,7 @@ a:visited {
 }
 .wrap .container .img_area {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   position: relative;
   text-align: center;
   perspective: 1000px;
@@ -519,16 +573,19 @@ a:visited {
 }
 .wrap .container .select_card_area {
   margin: 0 10px;
-  display: flex;
-  flex-direction: column;
   padding-bottom: 60px;
 }
-.wrap .container .select_card_area .card_container {
+.wrap .container .select_card_area .card_bg {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  padding: 1.5rem 0;
+}
+.wrap .container .select_card_area .card_container {
+  padding: 1rem 0;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  justify-content: flex-start;
 }
 .wrap .container .select_card_area .card_container::-webkit-scrollbar {
   height: 5px;
@@ -552,7 +609,7 @@ a:visited {
 }
 .wrap .container .select_card_area .card_container .select_card {
   width: 81px;
-  height: 141px;
+  height: 137px;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
@@ -573,7 +630,7 @@ a:visited {
 }
 .wrap .container .select_card_area .card_container .select_card span {
   color: #E1AC3F;
-  font-size: 1rem;
+  font-size: 0.8125rem;
 }
 .wrap .container .select_card_area .card_container .select_card img {
   width: 100%;
@@ -581,7 +638,7 @@ a:visited {
 }
 .wrap .container .select_card_area .card_container .select_card .card_order {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.125rem;
 }
 .wrap .container .result_area {
   width: 100%;

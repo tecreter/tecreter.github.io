@@ -437,22 +437,9 @@ var crdJson = [
         "ko_description": "운의 흐름이 좋지 않습니다. 호시탐탐 먹이를 노리는 사람, 특히 남성이 주변에 있을 수 있으며 주의 깊게 나를 지켜보는 사람이 목적을 가지고 있을 수 있습니다. 여성이라면 나쁜 의도로 접근하는 이성이 있을 수 있으니 연애 관계에 주의하는 것이 좋습니다. 남녀 모두 사기의 위험이 있으니 투자나 돈 거래에는 신중을 기해야 합니다.",
         "ko_advice": "만약 여성분이라면 주변에 오랫동안 나에게 간절하게 매달려온 이성이 있진 않은지 생각해볼 필요가 있습니다. 자존심을 내세우지 않고 묵묵히 직진하는 이성이 있고 그동안 그를 외면해 왔다면 그에 대해 다시금 생각해보는 것이 좋겠습니다. ",
         "ko_keywords": "움직임이 없는, 사기수가 있는, 꿍꿍이가 있는, 짝사랑",
-        "en_description": "",
-        "en_advice": "",
-        "en_keywords": ""
-    },
-    {
-        "card_index": "Your luck isn't favorable. Be cautious of people, especially men, who may be watching you with ulterior motives. If you're a woman, be wary of someone approaching you with bad intentions in a romantic context. Regardless of gender, there's a risk of deceit, so be careful with investments and financial transactions.\"",
-        "card_code": "If you are a woman, consider if there has been a man persistently interested in you for a long time. If there's someone who has quietly and steadily shown their feelings without letting pride get in the way, and you have overlooked him, it might be worth rethinking your stance on him.",
-        "card_short_code": "Motionless, Cheater, Have a secret design, Unrequited love",
-        "card_name": "",
-        "score": "",
-        "ko_description": "",
-        "ko_advice": "",
-        "ko_keywords": "",
-        "en_description": "",
-        "en_advice": "",
-        "en_keywords": ""
+        "en_description": "Your luck isn't favorable. Be cautious of people, especially men, who may be watching you with ulterior motives. If you're a woman, be wary of someone approaching you with bad intentions in a romantic context. Regardless of gender, there's a risk of deceit, so be careful with investments and financial transactions.",
+        "en_advice": "If you are a woman, consider if there has been a man persistently interested in you for a long time. If there's someone who has quietly and steadily shown their feelings without letting pride get in the way, and you have overlooked him, it might be worth rethinking your stance on him.",
+        "en_keywords": "Motionless, Cheater, Have a secret design, Unrequited love"
     },
     {
         "card_index": "34",
@@ -526,24 +513,11 @@ var crdJson = [
         "card_name": "The Moon",
         "score": "13",
         "ko_description": "심란하고 고뇌하는 시간이 될 수 있습니다. 생각과 고민이 많아지며, 우울감이나 조울감을 느낄 수 있습니다. 또한, 가까운 사람에게 말하지 못하고 숨겨야 하는 비밀이 생길 수 있습니다. 떳떳하게 밝히지 못할 일은 벌이지 마세요. ",
-        "ko_advice": "",
-        "ko_keywords": "",
-        "en_description": "",
-        "en_advice": "",
-        "en_keywords": ""
-    },
-    {
-        "card_index": "감성에 빠질 일을 찾아보면 좋습니다. 나만의 감성을 발휘한 콘텐츠를 작성하기에 유리합니다.\"",
-        "card_code": "우울, 조울, 비밀, 숨기는게 있는, 떳떳하지 못한, 고뇌, 걱정, 번뇌, 상심, 바람, 이중인격, 외도",
-        "card_short_code": "This could be a troubled and introspective time. You may find yourself overwhelmed with thoughts and worries, experiencing feelings of depression or mood swings. Additionally, you might have to keep a secret from those close to you. Avoid getting involved in anything you can't openly admit to.",
-        "card_name": "It's a good time to immerse yourself in activities that evoke your emotions. You'll find it favorable to create content that expresses your unique feelings and creativity.",
-        "score": "Depression, Bipolar, Secret, Keeping something hidden, Dishonest, Suffering, Worry, Anxiety, Heartbreak, Infidelity, Split personality",
-        "ko_description": "",
-        "ko_advice": "",
-        "ko_keywords": "",
-        "en_description": "",
-        "en_advice": "",
-        "en_keywords": ""
+        "ko_advice": "감성에 빠질 일을 찾아보면 좋습니다. 나만의 감성을 발휘한 콘텐츠를 작성하기에 유리합니다.",
+        "ko_keywords": "우울, 조울, 비밀, 숨기는게 있는, 떳떳하지 못한, 고뇌, 걱정, 번뇌, 상심, 바람, 이중인격, 외도",
+        "en_description": "This could be a troubled and introspective time. You may find yourself overwhelmed with thoughts and worries, experiencing feelings of depression or mood swings. Additionally, you might have to keep a secret from those close to you. Avoid getting involved in anything you can't openly admit to.",
+        "en_advice": "It's a good time to immerse yourself in activities that evoke your emotions. You'll find it favorable to create content that expresses your unique feelings and creativity.",
+        "en_keywords": "Depression, Bipolar, Secret, Keeping something hidden, Dishonest, Suffering, Worry, Anxiety, Heartbreak, Infidelity, Split personality"
     },
     {
         "card_index": "40",

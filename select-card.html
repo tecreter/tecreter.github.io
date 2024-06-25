@@ -53,8 +53,8 @@
         <div class="choosing_card_area">
             <div class="mixing_card_area">
                 <button class="outlined_button primary" onclick="javascript:shuffleCards();">카드 섞기</button>
-                <button type="button" class="contained_button blue custom">선택</button>
-                <button type="button" class="contained_button blue auto">자동 선택</button>
+                <!--<button type="button" class="contained_button blue custom">선택</button>-->
+                <button type="button" class="contained_button blue auto" name="testBtn">자동 선택</button>
             </div>
             <div class="card_wrap">
                 <style>svg path,svg rect{fill: #FF6700;}</style>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="select_card_area">
-            <div>
+            <div class="card_bg">
                 <ol class="card_container" id="card_container"></ol>
             </div>
             <script type="text/template" class="selected_card_template">
@@ -99,49 +99,12 @@
             </script>
         </div>
 
-        <!-- <div class="select_card_area">
-            <div style="margin:0;">
-                <ul class="card_container">
-                <li class="select_card selected">
-                    <img src="./img/tarot/cups_3.png"/>
-                </li>
-                <li class="select_card active">
-                    <span class="card_order">2번 째</span>
-                    <span>카드</span>
-                </li>
-                <li class="select_card">
-                    <span class="card_order">3번 째</span>
-                    <span>카드</span>
-                </li>
-                <li class="select_card">
-                    <span class="card_order">3번 째</span>
-                    <span>카드</span>
-                </li>
-                <li class="select_card">
-                    <span class="card_order">3번 째</span>
-                    <span>카드</span>
-                </li>
-                <li class="select_card">
-                    <span class="card_order">3번 째</span>
-                    <span>카드</span>
-                </li>
-                <li class="select_card">
-                    <span class="card_order">3번 째</span>
-                    <span>카드</span>
-                </li>
-                <li class="select_card">
-                    <span class="card_order">3번 째</span>
-                    <span>카드</span>
-                </li>
-            </ul>
-            </div>
-        </div> -->
-
-        <!-- <div class="main_divider">
-            <span class="divider_line" style="width: 100%;"></span>
-        </div> -->
-
     </div>
+
+    <div class="bottom_cta_area">
+        <button class="contained_button_primary disabled show_result">미래 확인하러 가기<img class="icon_arrow" src="./img/ChevronRightOutlined.svg" /></button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
     <script src="./js/script.js"></script>
@@ -171,6 +134,12 @@
                     // if(cardSelectedCnt == cardSelectType) {
                     //     location.href = './result.html';
                     // }
+
+                    if(cardSelectedCnt == cardSelectType) {
+                        $('.contained_button_primary').removeClass('disabled');
+                        var btn = document.querySelector("button[name=testBtn]");
+                        btn.setAttribute('disabled', '');
+                    }
                 }
                 else {
                     alert('카드를 이미 다 골랐어요!');
@@ -178,7 +147,7 @@
                 }
             });
 
-            $(document).on('click', '.contained_button.custom', function() {
+            $(document).on('click', '.contained_button.custom, .show_result', function() {
                 if(cardSelectedCnt < cardSelectType) {
                     alert(cardSelectType - cardSelectedCnt + '장의 카드를 골라주세요!');
                     return false;
@@ -189,12 +158,21 @@
             });
 
             $(document).on('click', '.contained_button.auto', function() {
+                shuffleCards();
                 for(var i=0;i<cardSelectType;i++) {
                     cardSelectedCnt += 1;
                     cardSelectedArr.push( randomInts()[i] );
                     setCardType();
+                    updateSelectedCard();
                 }
-                location.href='./result.html';
+
+                if(cardSelectedCnt >= cardSelectType) {
+                    $('.contained_button_primary').removeClass('disabled');
+                    var btn = document.querySelector("button[name=testBtn]");
+                    btn.setAttribute('disabled', '');
+                }
+
+                // location.href='./result.html';
             });
         });
 
