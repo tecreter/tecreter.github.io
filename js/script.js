@@ -55,3 +55,47 @@ function getParameter(param) {
 
     return requestParam;
 }
+
+(function () {
+    const selectLangKorea = document.getElementById('select-lang-ko');
+    const selectLangEng = document.getElementById('select-lang-en');
+
+    selectLangKorea.addEventListener('click', function () {
+        sessionStorage.setItem('cons_lang', 'ko');
+        location.reload();
+    });
+
+    selectLangEng.addEventListener('click', function () {
+        sessionStorage.setItem('cons_lang', 'en');
+        location.reload();
+    });
+
+})();
+
+let translations = {};
+let globalSiteLang = sessionStorage.getItem('cons_lang') || null;
+
+let blang = globalSiteLang == null ? (navigator.language || navigator.userLanguage) : globalSiteLang;
+let siteLang = (['en-US', 'en', 'EN'].indexOf(blang) >= 0) ? 'en' : 'ko';
+
+if(globalSiteLang == null) sessionStorage.setItem('cons_lang', siteLang);
+document.getElementById('select-lang-'+(siteLang == 'en' ? 'ko' : 'en')).style.display = "flex";
+
+const fetchContent = () => {
+    return fetch('/js/lang/'+siteLang+'.json')
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            translations = data;
+            translatePage();
+        });
+};
+fetchContent();
+const translatePage = () => {
+    document.querySelectorAll('[localization-key]').forEach((element) => {
+        let key = element.getAttribute('localization-key');
+        let translation = translations[key];
+        element.innerText = translation;
+    });
+};

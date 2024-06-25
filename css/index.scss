@@ -127,7 +127,7 @@ h1 {
       color: $white;
     }
 
-    &:hover {
+    &:hover:not(:disabled) {
       background: #1e3375;
     }
   }
@@ -171,7 +171,8 @@ h1 {
   }
 
   &:disabled {
-    opacity: 26%;
+    opacity: 50%;
+    cursor: default;
   }
 }
 
@@ -266,7 +267,7 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   margin: 0px;
   padding: 0px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   box-sizing: border-box;
   height: 100%;
   width: 100%;
@@ -335,7 +336,7 @@ a:visited {
 
       .gnb_button {
         cursor: pointer;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         padding: $px8;

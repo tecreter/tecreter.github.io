@@ -153,7 +153,7 @@ h1 {
 .contained_button.blue a {
   color: #FFFFFF;
 }
-.contained_button.blue:hover {
+.contained_button.blue:hover:not(:disabled) {
   background: #1e3375;
 }
 .contained_button.primary {
@@ -187,7 +187,8 @@ h1 {
   color: #FFFFFF;
 }
 .contained_button:disabled {
-  opacity: 26%;
+  opacity: 50%;
+  cursor: default;
 }
 
 .contained_button_primary {
@@ -268,7 +269,7 @@ body {
   font-family: "Pretendard-Regular", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   margin: 0px;
   padding: 0px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   box-sizing: border-box;
   height: 100%;
   width: 100%;
@@ -332,7 +333,7 @@ a:visited {
 }
 .wrap header .top_btn .gnb_button {
   cursor: pointer;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;

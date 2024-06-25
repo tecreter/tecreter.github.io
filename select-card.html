@@ -16,30 +16,30 @@
             <img src="./img/logo.svg"/>
         </a>
         <div class="top_btn">
-            <div id="select-lang-area" class="select_lang_area">
-                <a id="select-lang-korean" class="gnb_button">
-                    <img src="./img/translation.svg"/>
-                </a>
-                <a id="select-lang-english" class="gnb_button" style="display: none;">
-                    <img src="./img/translation2.svg"/>
-                </a>
-                <ul class="select_lang">
-                    <li id="lang-korean" class="lang_li active">
-                        <a href="#">
-                            한국어
-                        </a>
-                    </li>
-                    <li id="lang-english" class="lang_li">
-                        <a href="#">
-                            English
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- <a id="searchBtn">
-              <img src="./img/menu.svg"/>
-            </a> -->
+        <div id="select-lang-area" class="select_lang_area">
+          <a id="select-lang-ko" class="gnb_button ko">
+            <img src="img/translation.svg"/>
+          </a>
+          <a id="select-lang-en" class="gnb_button en">
+            <img src="img/translation2.svg"/>
+          </a>
+          <!-- <ul class="select_lang">
+            <li id="lang-korean" class="lang_li active">
+              <a href="#">
+                한국어
+              </a>
+            </li>
+            <li id="lang-english" class="lang_li">
+              <a href="#">
+                English
+              </a>
+            </li>
+          </ul> -->
         </div>
+        <!-- <a id="searchBtn">
+          <img src="img/menu.svg"/>
+        </a> -->
+      </div>
     </header>
     <div class="container">
         <div class="main_divider">
@@ -48,13 +48,13 @@
             <span class="divider_line"></span>
         </div>
         <div class="main_text">
-            <span class="sub_title">미래를 떠올리며 아래에서 카드를 선택해 주세요.</span>
+            <span class="sub_title" localization-key="sel_01">미래를 떠올리며 아래에서 카드를 선택해 주세요.</span>
         </div>
         <div class="choosing_card_area">
             <div class="mixing_card_area">
-                <button class="outlined_button primary" onclick="javascript:shuffleCards();">카드 섞기</button>
+                <button class="outlined_button primary" onclick="javascript:shuffleCards();" localization-key="sel_02">카드 섞기</button>
                 <!--<button type="button" class="contained_button blue custom">선택</button>-->
-                <button type="button" class="contained_button blue auto" name="testBtn">자동 선택</button>
+                <button type="button" class="contained_button blue auto" name="autoSetBtn" localization-key="sel_03">자동 선택</button>
             </div>
             <div class="card_wrap">
                 <style>svg path,svg rect{fill: #FF6700;}</style>
@@ -93,8 +93,8 @@
             </div>
             <script type="text/template" class="selected_card_template">
                 <li class="select_card {class1}" id="selected_card{no}">
-                    <span class="card_order {class2}">{no}번 째</span>
-                    <span class="{class3}">카드</span>
+                    <span class="card_order {class2}">{no}<span localization-key="sel_05">번 째</span></span>
+                    <span class="{class3}"><span localization-key="sel_06">카드</span></span>
                 </li>
             </script>
         </div>
@@ -102,7 +102,7 @@
     </div>
 
     <div class="bottom_cta_area">
-        <button class="contained_button_primary disabled show_result">미래 확인하러 가기<img class="icon_arrow" src="./img/ChevronRightOutlined.svg" /></button>
+        <button class="contained_button_primary disabled show_result"><span localization-key="sel_04">미래 확인하러 가기</span><img class="icon_arrow" src="./img/ChevronRightOutlined.svg" /></button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -137,7 +137,7 @@
 
                     if(cardSelectedCnt == cardSelectType) {
                         $('.contained_button_primary').removeClass('disabled');
-                        var btn = document.querySelector("button[name=testBtn]");
+                        var btn = document.querySelector("button[name=autoSetBtn]");
                         btn.setAttribute('disabled', '');
                     }
                 }
@@ -168,7 +168,7 @@
 
                 if(cardSelectedCnt >= cardSelectType) {
                     $('.contained_button_primary').removeClass('disabled');
-                    var btn = document.querySelector("button[name=testBtn]");
+                    var btn = document.querySelector("button[name=autoSetBtn]");
                     btn.setAttribute('disabled', '');
                 }
 
@@ -221,6 +221,9 @@
             pickUp();
             updateSelectedCard();
             document.getElementById("card_container").scrollLeft = 0;
+
+            var btn = document.querySelector("button[name=autoSetBtn]");
+            btn.removeAttribute('disabled');
         }
 
         function randomInts(quantity, max){

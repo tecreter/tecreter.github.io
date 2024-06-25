@@ -17,13 +17,13 @@
       </a>
       <div class="top_btn">
         <div id="select-lang-area" class="select_lang_area">
-          <a id="select-lang-korean" class="gnb_button">
+          <a id="select-lang-ko" class="gnb_button ko">
             <img src="img/translation.svg"/>
           </a>
-          <a id="select-lang-english" class="gnb_button" style="display: none;">
+          <a id="select-lang-en" class="gnb_button en">
             <img src="img/translation2.svg"/>
           </a>
-          <ul class="select_lang">
+          <!-- <ul class="select_lang">
             <li id="lang-korean" class="lang_li active">
               <a href="#">
                 한국어
@@ -34,7 +34,7 @@
                 English
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <!-- <a id="searchBtn">
           <img src="img/menu.svg"/>
@@ -167,16 +167,11 @@
           </div>
       </script>
 
-
-
       <div class="result_button_area">
-        <a class="outlined_button white" style="margin-bottom: 16px;">
-          <img src="img/LinkOutlined.svg"/>
-          친구들에게 공유하기</a>
-        <a class="outlined_button pink">
-            <img src="img/chat_paste.svg"/>
-            서비스 피드백 보내기</a>
+        <button type="button" class="outlined_button white btnShare" style="margin-bottom: 16px;"><img src="/img/LinkOutlined.svg"/><span localization-key="res_05">친구들에게 공유하기</span></a>
+        <button type="button" class="outlined_button pink btnFeedback"><img src="/img/chat_paste.svg"/><span localization-key="res_06">서비스 피드백 보내기</span></>
       </div>
+
   </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -191,6 +186,28 @@
 
             $(document).ready(function () {
               _init();
+
+              $('.btnShare').click(function () {
+                var tempElem = document.createElement('textarea');
+                tempElem.value = window.location.origin;
+                document.body.appendChild(tempElem);
+                tempElem.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempElem);
+                alert('공유하기 주소가 복사되었습니다.');
+            });
+
+              $('.btnFeedback').click(function() {
+                if(siteLang == 'en') {
+                  window.open('https://forms.gle/idhrD1rQxXLd9Xs39', '_blank');
+                  // location.href = 'https://forms.gle/idhrD1rQxXLd9Xs39';
+                }
+                else {
+                  window.open('https://forms.gle/722EZhY5P7HCm9yZA', '_blank');
+                  // location.href = 'https://forms.gle/722EZhY5P7HCm9yZA';
+                }
+              })
+
             });
 
             function _init() {
@@ -205,7 +222,12 @@
 
                 var img = '<div class="result_card"><img src="./img/tarot/' + crdJson[trueFutCfgArr.cardArr[i]].card_code + '.png"></div>';
 
-                var txt = '<div class="text_area"><span class="sub_text">카드 '+(i+1)+'의 운세 점수</span><div class="score_text_area"><h1 class="title">'+crdJson[trueFutCfgArr.cardArr[i]].score+'</h1><span>점</span></div><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].ko_description+'</span><div class="text_group"><h5 class="subtitle">카드의 조언</h5><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].ko_advice+'</span></div><div class="text_group"><h5 class="subtitle">카드의 키워드</h5><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].ko_keywords+'</span></div></div>';
+                if(siteLang == 'en') {
+                  var txt = '<div class="text_area"><span class="sub_text"><span localization-key="res_01">카드 의 운세 점수</span> '+(i+1)+'</span><div class="score_text_area"><h1 class="title">'+crdJson[trueFutCfgArr.cardArr[i]].score+'</h1><span localization-key="res_02">점</span></div><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].en_description+'</span><div class="text_group"><h5 class="subtitle" localization-key="res_03">카드의 조언</h5><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].en_advice+'</span></div><div class="text_group"><h5 class="subtitle" localization-key="res_04">카드의 키워드</h5><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].en_keywords+'</span></div></div>';
+                }
+                else {
+                  var txt = '<div class="text_area"><span class="sub_text">카드 '+(i+1)+'<span localization-key="res_01">의 운세 점수</span></span><div class="score_text_area"><h1 class="title">'+crdJson[trueFutCfgArr.cardArr[i]].score+'</h1><span localization-key="res_02">점</span></div><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].ko_description+'</span><div class="text_group"><h5 class="subtitle" localization-key="res_03">카드의 조언</h5><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].ko_advice+'</span></div><div class="text_group"><h5 class="subtitle" localization-key="res_04">카드의 키워드</h5><span class="description">'+crdJson[trueFutCfgArr.cardArr[i]].ko_keywords+'</span></div></div>';
+                }
 
                 var divider = ((i+1) >= trueFutCfgArr.cardType) ? '' : '<div class="main_divider"><span class="divider_line"></span><img src="img/img_divider.svg"/><span class="divider_line"></span></div>';
 
