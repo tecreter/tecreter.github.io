@@ -178,23 +178,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/card.json"></script><script type="text/javascript">
-        var cardArr = [],
-            cardSelectType = getParameter('t'),
-            cardSelectedCnt = 0,
-            cardSelectedArr = [],
-            trueFutCfgArr = JSON.parse(localStorage.getItem('tf'));
+        var cardArr = [];
+        var shareResponse = getParameter('share') || '';
+        var shareResult = (shareResponse.length != 0) ? decodeURIComponent(JSON.parse(shareResponse)) : '';
+        var resultShare = (shareResponse.length != 0) ? JSON.parse(shareResult) : '';
+        var cardType = (shareResponse.length != 0) ? resultShare.cardType : localStorage.getItem('cardType');
+        var trueFutCfgArr = '';
+        if(shareResult != '') {
+          localStorage.setItem('tf', JSON.stringify(resultShare));
+        }
+        trueFutCfgArr = JSON.parse(localStorage.getItem('tf'));
 
             $(document).ready(function () {
               _init();
 
               $('.btnShare').click(function () {
+
+                let encodeStr = encodeURIComponent(JSON.stringify(localStorage.getItem('tf')));
+                let decodeStr = JSON.parse(decodeURIComponent(encodeStr));
+
+                let shareUrl = window.location.origin + window.location.pathname + '?share=' + encodeStr;
+
+
+
                 var tempElem = document.createElement('textarea');
-                tempElem.value = window.location.origin;
+                tempElem.value = shareUrl;
                 document.body.appendChild(tempElem);
                 tempElem.select();
                 document.execCommand("copy");
                 document.body.removeChild(tempElem);
                 alert('공유하기 주소가 복사되었습니다.');
+
             });
 
               $('.btnFeedback').click(function() {
@@ -238,6 +252,10 @@
                 wrap.append( result );
 
               }
+
+              setTimeout(() => {
+                  if (fetchContent instanceof Function) fetchContent();
+              }, 100);
 
             }
 
