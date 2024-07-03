@@ -108,18 +108,16 @@
                 </div>
                 <script type="text/template" class="selected_card_template">
                     <li class="select_card {class1}" id="selected_card{no}">
-                        <span class="card_order {class2}">{no}<span localization-key="sel_05">번 째</span></span>
+                        <span class="card_order {class2}">{no}{count_unit}</span>
                         <span class="{class3}"><span localization-key="sel_06">카드</span></span>
                     </li>
                 </script>
             </div>
 
         </div>
-
         <div class="bottom_cta_area">
             <button class="contained_button_primary disabled show_result"><span localization-key="sel_04">미래 확인하러 가기</span><img class="icon_arrow" src="./img/ChevronRightOutlined.svg" /></button>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
         <script src="./js/script.js"></script>
@@ -204,7 +202,24 @@
                 wrap.html('');
                 var temp = $('.selected_card_template');
                 for(var i = 0; i< cardSelectType; i++) {
-                    var html = (i==0) ? temp.html().replace(/\{no\}/gi, i+1).replace(/\{class1\}/gi, 'active') : temp.html().replace(/\{no\}/gi, i+1);
+                    var html = '';
+                    if(globalSiteLang == 'en') {
+                        if(i==0) {
+                            html = temp.html().replace(/\{no\}/gi, i+1).replace(/\{count_unit\}/gi, 'st').replace(/\{class1\}/gi, 'active');
+                        }
+                        else if(i==1) {
+                            html = temp.html().replace(/\{no\}/gi, i+1).replace(/\{count_unit\}/gi, 'nd');
+                        }
+                        else if(i==2) {
+                            html = temp.html().replace(/\{no\}/gi, i+1).replace(/\{count_unit\}/gi, 'rd');
+                        }
+                        else {
+                            html = temp.html().replace(/\{no\}/gi, i+1).replace(/\{count_unit\}/gi, 'th');
+                        }
+                    }
+                    else {
+                        html = (i==0) ? temp.html().replace(/\{no\}/gi, i+1).replace(/\{count_unit\}/gi, '번 째').replace(/\{class1\}/gi, 'active') : temp.html().replace(/\{no\}/gi, i+1).replace(/\{count_unit\}/gi, '번 째');
+                    }
                     wrap.append( html );
                 }
 
@@ -277,7 +292,16 @@
                     if(i==(cardSelectedCardLength+1)) {
                         isActive = 'active';
                     }
-                    var img = '<li class="select_card {class1} '+isActive+'" id="selected_card'+i+'"><span class="card_order {class2}">'+i+'번 째</span><span class="{class3}">카드</span></li>';
+                    var img = '';
+                    if(globalSiteLang  == 'en') {
+                        if(i == 1) img = '<li class="select_card {class1} '+isActive+'" id="selected_card'+i+'"><span class="card_order {class2}">'+i+'st</span><span class="{class3}">Card</span></li>';
+                        else if(i == 2) img = '<li class="select_card {class1} '+isActive+'" id="selected_card'+i+'"><span class="card_order {class2}">'+i+'nd</span><span class="{class3}">Card</span></li>';
+                        else if(i == 3) img = '<li class="select_card {class1} '+isActive+'" id="selected_card'+i+'"><span class="card_order {class2}">'+i+'rd</span><span class="{class3}">Card</span></li>';
+                        else img = '<li class="select_card {class1} '+isActive+'" id="selected_card'+i+'"><span class="card_order {class2}">'+i+'th</span><span class="{class3}">Card</span></li>';
+                    }
+                    else {
+                        img = '<li class="select_card {class1} '+isActive+'" id="selected_card'+i+'"><span class="card_order {class2}">'+i+'번 째</span><span class="{class3}">카드</span></li>';
+                    }
                     wrap.append( img );
                 }
 
