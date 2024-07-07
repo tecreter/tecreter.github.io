@@ -1,0 +1,27 @@
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BadBot
+Disallow: /
+
+User-agent: Synapse
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /config/
+Allow: /
+
+Sitemap: https://www.mytruefuture.com/sitemap.xml
